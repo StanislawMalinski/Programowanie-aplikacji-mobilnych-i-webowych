@@ -1,0 +1,32 @@
+﻿<Application x:Class="P03WeatherForecastWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:P03WeatherForecastWPF"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <SolidColorBrush x:Key="MyFavoriteColor" Color="Red"></SolidColorBrush>
+        
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="LightBlue"></Setter>
+            <Setter Property="Foreground" Value="DarkBlue"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Margin" Value="6"></Setter>
+            <Setter Property="Padding" Value="5"></Setter>
+        </Style>
+
+        <Style TargetType="Control" x:Key="RedControl">
+            <Setter Property="Background" Value="{StaticResource MyFavoriteColor}"></Setter>
+            <Setter Property="Foreground" Value="Orange"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Margin" Value="6"></Setter>
+            <Setter Property="Padding" Value="5"></Setter>
+        </Style>
+
+        <Style x:Key="RedButtons" TargetType="Button"  BasedOn="{StaticResource RedControl}">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+
+
+    </Application.Resources>
+</Application>

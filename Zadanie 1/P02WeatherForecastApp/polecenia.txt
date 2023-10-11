@@ -1,0 +1,4 @@
+dotnet new console -n P02WeatherForecastApp
+
+dotnet sln add .\P02WeatherForecastApp\P02WeatherForecastApp.csproj
+

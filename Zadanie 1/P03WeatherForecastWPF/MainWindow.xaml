@@ -1,0 +1,63 @@
+﻿<Window x:Class="P03WeatherForecastWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:P03WeatherForecastWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+       
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="LightGreen"></Setter>
+            <Setter Property="Foreground" Value="DarkGreen"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Margin" Value="6"></Setter>
+            <Setter Property="Padding" Value="5"></Setter>
+        </Style>
+    </Window.Resources>
+    
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="New"></MenuItem>
+                <MenuItem Header="Open"></MenuItem>
+                <MenuItem Header="Save"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Copy"></MenuItem>
+                <MenuItem Header="Paste"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <StackPanel DockPanel.Dock="Left">
+            <ProgressBar x:Name="pbProgress" Height="20"></ProgressBar>
+            <Label Style="{StaticResource RedControl}"  Content="City:"></Label>
+            <TextBox x:Name="txtCity" AcceptsReturn="True"></TextBox>
+            <Button Style="{StaticResource RedButtons}" Content="Get temperature" x:Name="btnGetTemperature" Click="btnGetTemperature_Click"></Button>
+            <Button Content="Get temperature Async 1" x:Name="btnGetTemperatureAsnyc1" Click="btnGetTemperatureAsnyc1_Click"></Button>
+            <Button Content="Get temperature Async 2" x:Name="btnGetTemperatureAsnyc2" Click="btnGetTemperatureAsnyc2_Click"></Button>
+            <Button Content="Get temperature Async 3" x:Name="btnGetTemperatureAsnyc3" Click="btnGetTemperatureAsnyc3_Click"></Button>
+            <Button Style="{StaticResource MyButtonStyle}" Content="Get temperature Async 4" x:Name="btnGetTemperatureAsnyc4" Click="btnGetTemperatureAsnyc4_Click"></Button>
+            <Button Style="{StaticResource MyButtonStyle}" Content="Get temperature Async 5" x:Name="btnGetTemperatureAsnyc5" Click="btnGetTemperatureAsnyc5_Click"></Button>
+            <Button Style="{StaticResource MyButtonStyle}" Content="Get temperature Async 6" x:Name="btnGetTemperatureAsnyc6" Click="btnGetTemperatureAsnyc6_Click"></Button>
+        </StackPanel>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="tbTemperature" Text="..."></TextBlock>
+            <Image Grid.Column="1" Source="Images/sun.jpg"></Image>
+            <Image Grid.Column="1" Source="Images/wf.jpg" Grid.Row="1"></Image>
+            <ListView x:Name="lvLogger" Grid.Row="1" ></ListView>
+        </Grid>
+        
+        
+    </DockPanel>
+</Window>

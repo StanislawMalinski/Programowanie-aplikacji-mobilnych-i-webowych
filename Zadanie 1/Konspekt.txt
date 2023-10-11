@@ -1,0 +1,17 @@
+...
+
+1 ) wprowadzenie do net core 
+dotnet new console -n P02WeatherForecastApp
+
+dotnet sln add .\P02WeatherForecastApp\P02WeatherForecastApp.csproj
+
+2) różnice web client i reg ex
+
+3) P03WeatherForecastWPF
+  - kontenery i obrazki (jako resource lub content )  w wpf 
+4) sposoby przetwrzania asynchroicznego 
+
+5) polacenie z api pogodowe 
+ - mapowanie klas https://json2csharp.com/
+ - przechowywanie danych w sekretach i konfiguracji 
+
