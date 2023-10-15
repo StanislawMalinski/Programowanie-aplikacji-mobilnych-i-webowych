@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace P05WeatherForecastAPI.ClientExtended.Models
 {
-    internal class GeoPosition
+    internal class Day
     {
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
-        public Elevation Elevation { get; set; }
+    public int Icon { get; set; }
+    public string IconPhrase { get; set; }
+    public bool HasPrecipitation { get; set; }
     }
 }

@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace P05WeatherForecastAPI.ClientExtended.Models
 {
-    internal class GeoPosition
+    internal class WeatherForecastResponse
     {
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
-        public Elevation Elevation { get; set; }
+        public Headline Headline { get; set; }
+        public DailyForecast [] DailyForecasts { get; set; }
     }
 }

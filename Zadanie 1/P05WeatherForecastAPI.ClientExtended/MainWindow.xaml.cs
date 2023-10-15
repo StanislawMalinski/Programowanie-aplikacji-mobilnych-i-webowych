@@ -41,14 +41,19 @@ namespace P05WeatherForecastAPI.ClientExtended
 
             if(txtIP.Text != "")
             {
-                var location = await accuWeatherService.GetCurrentLocationFromIP(txtIP.Text);
-                var weather  = await accuWeatherService.GetCurrentConditions(location.Key);
-                string tempValueC = location.LocalizedName;
-                double tempValueW = weather.Temperature.Metric.Value;
-                string tempValueG = Convert.ToString(location.GeoPosition.Latitude) + "," + Convert.ToString(location.GeoPosition.Longitude);
-                txtLatLon.Text = tempValueG;
-                lblCityName.Content = tempValueC;
-                lblTemperatureValue.Content = Convert.ToString(tempValueW);
+                var ip = await accuWeatherService.GetCurrentLocationFromIP(txtIP.Text);
+                if (ip == null){
+                    return;
+                }
+                var weather  = await accuWeatherService.GetCurrentConditions(ip.Key);
+
+                string tempValueCity = ip.LocalizedName;
+                double tempValueWeather = weather.Temperature.Metric.Value;
+                lblCityName.Content = tempValueCity;
+                lblTemperatureValue.Content = Convert.ToString(tempValueWeather);
+
+                txtCity.Text = tempValueCity;
+                txtLatLon.Text = Convert.ToString(ip.geoposition.)
                 return;
             }
 
@@ -73,8 +78,6 @@ namespace P05WeatherForecastAPI.ClientExtended
                 lblCityName.Content = selectedCity.LocalizedName;
                 double tempValue = weather.Temperature.Metric.Value;
                 lblTemperatureValue.Content = Convert.ToString(tempValue);
-                string tempValueG = Convert.ToString(selectedCity.GeoPosition.Latitude) + "," + Convert.ToString(selectedCity.GeoPosition.Longitude);
-                txtLatLon.Text = tempValueG;
             }
         }
     }

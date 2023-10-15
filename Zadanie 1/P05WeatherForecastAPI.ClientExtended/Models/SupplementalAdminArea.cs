@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace P05WeatherForecastAPI.ClientExtended.Models
 {
-    internal class GeoPosition
+    public class SupplementalAdminArea
     {
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
-        public Elevation Elevation { get; set; }
+        public int Level { get; set; }
+        public string LocalizedName { get; set; }
+        public string EnglishName { get; set; }
     }
 }
