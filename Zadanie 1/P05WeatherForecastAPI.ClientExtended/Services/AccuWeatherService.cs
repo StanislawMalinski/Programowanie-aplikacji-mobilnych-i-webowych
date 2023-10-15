@@ -88,7 +88,7 @@ namespace P05WeatherForecastAPI.ClientExtended.Services
 
         public async Task<DailyForecast> GetForcastForOneDay(string cityKey)
         {
-            string uri = base_url + "/" + string.Format(one_day_forcast_endpoint, cityKey, api_key, language);
+            string uri = base_url + "/" + string.Format(one_day_forcast_endpoint, cityKey, api_key, "en");
             using (HttpClient client = new HttpClient())
             {
                 var response = await client.GetAsync(uri);

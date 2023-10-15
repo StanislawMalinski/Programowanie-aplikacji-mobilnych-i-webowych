@@ -13,7 +13,7 @@ namespace P05WeatherForecastAPI.ClientExtended.Models
         public Temperature Temperature { get; set; }
         public Day Day { get; set; }
         public Night Night { get; set; }
-        public List<string> Sources { get; set; }
+        public string[] Sources { get; set; }
         public string MobileLink { get; set; }
         public string Link { get; set; }
     }
