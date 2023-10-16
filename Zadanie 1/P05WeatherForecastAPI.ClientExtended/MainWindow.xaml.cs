@@ -82,6 +82,11 @@ namespace P05WeatherForecastAPI.ClientExtended
             lblWeatherForcast.Content = forecast.Day.IconPhrase;
         }
 
+        private async void setNeighbours(string key){
+            City[] cities = await accuWeatherService.GetNeighbouredCity(key);
+            lbData.ItemsSource = cities;
+        }
+
         private async void lbData_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedCity = (City) lbData.SelectedItem;
@@ -92,6 +97,7 @@ namespace P05WeatherForecastAPI.ClientExtended
                 double tempValue = weather.Temperature.Metric.Value;
                 lblTemperatureValue.Content = Convert.ToString(tempValue);
                 setForcast(selectedCity.Key);
+                setNeighbours(selectedCity.Key);
             }
         }
     }
