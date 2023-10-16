@@ -26,6 +26,8 @@
             <Label x:Name="lblTemperatureValue" HorizontalAlignment="Center" Content=".."></Label>
             <Label HorizontalAlignment="Center" Content="Tomorrow:"></Label>
             <Label x:Name="lblWeatherForcast" HorizontalAlignment="Center" Content=".."></Label>
+            <Label HorizontalAlignment="Center" Content="Yesterday:"></Label>
+            <Label x:Name="lblWeatherHistory" HorizontalAlignment="Center" Content=".."></Label>
         </StackPanel>
     </DockPanel>
 </Window>

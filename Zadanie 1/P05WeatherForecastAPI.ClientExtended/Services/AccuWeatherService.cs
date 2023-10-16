@@ -103,7 +103,7 @@ namespace P05WeatherForecastAPI.ClientExtended.Services
             }
         }
 
-        public async Task<WeatherHistory> GetWheaterHistory(string cityKey){
+        public async Task<WeatherHistory> GetWeatherHistory(string cityKey){
             string uri = base_url + "/" + string.Format(one_day_history_endpoint, cityKey, api_key, "en");
             using (HttpClient client = new HttpClient())
             {
