@@ -73,7 +73,7 @@ namespace P05WeatherForecastAPI.ClientExtended
 
             lblCityName.Content = tempValueCity;
             lblTemperatureValue.Content = Convert.ToString(tempValueWeather);
-            setForcast(key);
+            setWindow(key);
         }
 
         private async void setForcast(string key){
@@ -87,6 +87,17 @@ namespace P05WeatherForecastAPI.ClientExtended
             lbData.ItemsSource = cities;
         }
 
+        private async void setHistory(string key){
+            WeatherHistory history = await accuWeatherService.GetWeatherHistory(key);
+            lblWeatherHistory.Content = history;
+        }
+
+        private void setWindow(string key){
+            setForcast(key);
+            setNeighbours(key);
+            setHistory(key);
+        }
+
         private async void lbData_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedCity = (City) lbData.SelectedItem;
@@ -96,8 +107,7 @@ namespace P05WeatherForecastAPI.ClientExtended
                 lblCityName.Content = selectedCity.LocalizedName;
                 double tempValue = weather.Temperature.Metric.Value;
                 lblTemperatureValue.Content = Convert.ToString(tempValue);
-                setForcast(selectedCity.Key);
-                setNeighbours(selectedCity.Key);
+                setWindow(selectedCity.Key);
             }
         }
     }
