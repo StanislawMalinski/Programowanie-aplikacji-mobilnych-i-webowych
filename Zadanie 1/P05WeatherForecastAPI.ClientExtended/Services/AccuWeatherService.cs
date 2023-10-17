@@ -22,7 +22,7 @@ namespace P05WeatherForecastAPI.ClientExtended.Services
         private const string geoposition_endpoint = "/locations/v1/cities/geoposition/search?apikey={0}&q={1}&language={2}"; //2
         private const string one_day_forcast_endpoint = "/forecasts/v1/daily/1day/{0}?apikey={1}&language={2}"; //3
         private const string one_day_history_endpoint = "currentconditions/v1/{0}/historical/24?apikey={1}&language={2}"; //4
-        private const string neighbors_city_endpoint=  "locations/v1/cities/neighbors/{0}?apikey={1}&language={2}"; //5
+        private const string neighbors_city_endpoint =  "locations/v1/cities/neighbors/{0}?apikey={1}&language={2}"; //5
 
 
         // private const string api_key = "5hFl75dja3ZuKSLpXFxUzSc9vXdtnwG5";
@@ -103,14 +103,14 @@ namespace P05WeatherForecastAPI.ClientExtended.Services
             }
         }
 
-        public async Task<WeatherHistory> GetWeatherHistory(string cityKey){
+        public async Task<WeatherInfo> GetWeatherHistory(string cityKey){
             string uri = base_url + "/" + string.Format(one_day_history_endpoint, cityKey, api_key, "en");
             using (HttpClient client = new HttpClient())
             {
                 var response = await client.GetAsync(uri);
                 string json = await response.Content.ReadAsStringAsync();
-                WeatherHistory wheatherResponse = JsonConvert.DeserializeObject<WeatherHistory>(json);
-                return wheatherResponse;
+                WeatherInfo[] wheatherResponse = JsonConvert.DeserializeObject<WeatherInfo[]>(json);
+                return wheatherResponse.Last();
             }
         }
 

@@ -88,8 +88,8 @@ namespace P05WeatherForecastAPI.ClientExtended
         }
 
         private async void setHistory(string key){
-            WeatherHistory history = await accuWeatherService.GetWeatherHistory(key);
-            lblWeatherHistory.Content = history;
+            WeatherInfo history = await accuWeatherService.GetWeatherHistory(key);
+            lblWeatherHistory.Content = history.WeatherText;
         }
 
         private void setWindow(string key){
