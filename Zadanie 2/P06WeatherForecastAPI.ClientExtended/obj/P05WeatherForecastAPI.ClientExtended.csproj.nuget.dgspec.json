@@ -1,0 +1,80 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Politechnika\\Semestr 5\\Programowanie aplikacji mobilnych i webowych\\Labolatoria\\Zadanie 2\\P06WeatherForecastAPI.ClientExtended\\P06WeatherForecastAPI.ClientExtended.csproj": {}
+  },
+  "projects": {
+    "D:\\Politechnika\\Semestr 5\\Programowanie aplikacji mobilnych i webowych\\Labolatoria\\Zadanie 2\\P06WeatherForecastAPI.ClientExtended\\P06WeatherForecastAPI.ClientExtended.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Politechnika\\Semestr 5\\Programowanie aplikacji mobilnych i webowych\\Labolatoria\\Zadanie 2\\P06WeatherForecastAPI.ClientExtended\\P06WeatherForecastAPI.ClientExtended.csproj",
+        "projectName": "P06WeatherForecastAPI.ClientExtended",
+        "projectPath": "D:\\Politechnika\\Semestr 5\\Programowanie aplikacji mobilnych i webowych\\Labolatoria\\Zadanie 2\\P06WeatherForecastAPI.ClientExtended\\P06WeatherForecastAPI.ClientExtended.csproj",
+        "packagesPath": "C:\\Users\\Staszek\\.nuget\\packages\\",
+        "outputPath": "D:\\Politechnika\\Semestr 5\\Programowanie aplikacji mobilnych i webowych\\Labolatoria\\Zadanie 2\\P06WeatherForecastAPI.ClientExtended\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Staszek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0-windows7.0": {
+            "targetAlias": "net7.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
