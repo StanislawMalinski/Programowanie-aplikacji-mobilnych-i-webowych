@@ -29,6 +29,8 @@ namespace P04WeatherForecastAPI.Client
             services.AddSingleton<IFavoriteCityService, FavoriteCityService>();
             services.AddSingleton<MainViewModelV4>();
             services.AddSingleton<FavoriteCityViewModel>();
+            services.AddSingleton<HistoryViewModel>();
+            services.AddSingleton<ForcastViewModel>();
            
             services.AddTransient<MainWindow>();
             services.AddTransient<FavoriteCitiesView>();

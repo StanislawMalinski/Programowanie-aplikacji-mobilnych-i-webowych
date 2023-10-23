@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P04WeatherForecastAPI.Client.Models.ViewModels
+namespace P04WeatherForecastAPI.Client.ViewModels
 {
     public class HistoryViewModel
     {

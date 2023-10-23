@@ -24,8 +24,8 @@ namespace P04WeatherForecastAPI.Client.ViewModels
     {
         private CityViewModel _selectedCity;
         private Weather _weather;
-        private ForcastViewModel _forcastViewModel;
-        private DailyForecast _dailyForecast;
+        private ForcastViewModel _forcast;
+        private HistoryViewModel _history; 
         private readonly IAccuWeatherService _accuWeatherService;
         private readonly FavoriteCitiesView _favoriteCitiesView;
         private readonly FavoriteCityViewModel _favoriteCityViewModel;
@@ -63,8 +63,11 @@ namespace P04WeatherForecastAPI.Client.ViewModels
             {
                 _weather = await _accuWeatherService.GetCurrentConditions(SelectedCity.Key); 
                 var neighbours = await _accuWeatherService.GetNeighbouredCity(_selectedCity.Key);
+                var forcast = await _accuWeatherService.GetForcastForOneDay(SelectedCity.Key);
+                var history = await _accuWeatherService.GetWeatherHistory(SelectedCity.Key);
 
-
+                _forcast = new ForcastViewModel(forcast);
+                _history = new HistoryViewModel(history);
                 WeatherView  = new WeatherViewModel(_weather);
                 
                 Cities.Clear();
