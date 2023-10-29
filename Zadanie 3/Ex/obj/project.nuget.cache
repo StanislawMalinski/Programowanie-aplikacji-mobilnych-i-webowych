@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gzFk2E7nmd/Wu29UsXmpvdMF550pvkJW0hzeC5iWzLJZFg+wSxRyGilytJr7Pp5ucOjq1bZHRHlPzH06msp7OQ==",
+  "success": true,
+  "projectFilePath": "/Users/stanislaw/Documents/Politechnika/Sem 5/Programowanie-aplikacji-mobilnych-i-webowych/Zadanie 3/Ex/Ex3.csproj",
+  "expectedPackageFiles": [
+    "/Users/stanislaw/.nuget/packages/microsoft.windowsdesktop.app.ref/7.0.12/microsoft.windowsdesktop.app.ref.7.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,75 @@
+using System.Collections.Generic;
+using System.Linq;
+using Film.Api.Models;
+using Film.DataSeeder;
+
+namespace Film.Api
+{
+    public class FilmDummyBackend : IFilmServices
+    {
+        private final FilmSeeder _filmSeeder = new FilmSeeder();
+
+        Task<ServiceResponse<List<FilmModel>>> GetFilms()
+        {
+            var response = new ServiceResponse<List<FilmModel>>();
+            response.Data = _filmSeeder.GetRandomFilms(100);
+            response.Message = "This is a dummy backend.";
+            response.Success = true;
+            return response;
+        }
+
+        Task<ServiceResponse<List<FilmModel>>> GetFilms(FilterRequest filterRequest)
+        {
+            var response = new ServiceResponse<List<FilmModel>>();
+            response.Data = _filmSeeder.GetRandomFilms(100);
+            response.Message = "This is a dummy backend.";
+            response.Success = true;
+            return response;
+        }
+
+        Task<ServiceResponse<List<FilmModel>>> GetTop50Films()
+        {
+            var response = new ServiceResponse<List<FilmModel>>();
+            response.Data = _filmSeeder.GetRandomFilms(50);
+            response.Message = "This is a dummy backend.";
+            response.Success = true;
+            return response;
+        }
+
+        Task<ServiceResponse<FilmModel>> GetFilm(string title)
+        {
+            var response = new ServiceResponse<FilmModel>();
+            response.Data = _filmSeeder.GetRandomFilms(1).FirstOrDefault();
+            response.Message = "This is a dummy backend.";
+            response.Success = true;
+            return response;
+        }
+
+        Task<ServiceResponse<FilmModel>> CreateFilm(FilmModel film)
+        {
+            var response = new ServiceResponse<FilmModel>();
+            response.Data = film;
+            response.Message = "This is a dummy backend.";
+            response.Success = true;
+            return response;
+        }
+
+        Task<ServiceResponse<FilmModel>> UpdateFilm(FilmModel film)
+        {
+            var response = new ServiceResponse<FilmModel>();
+            response.Data = film;
+            response.Message = "This is a dummy backend.";
+            response.Success = true;
+            return response;
+        }
+
+        Task<ServiceResponse<FilmModel>> DeleteFilm(string title)
+        {
+            var response = new ServiceResponse<FilmModel>();
+            response.Data = _filmSeeder.GetRandomFilms(1).FirstOrDefault();
+            response.Message = "This is a dummy backend.";
+            response.Success = true;
+            return response;
+        }
+    }
+}

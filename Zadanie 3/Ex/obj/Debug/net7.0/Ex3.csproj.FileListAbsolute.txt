@@ -1,0 +1,5 @@
+/Users/stanislaw/Documents/Politechnika/Sem 5/Programowanie-aplikacji-mobilnych-i-webowych/Zadanie 3/Ex/obj/Debug/net7.0/Ex3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/stanislaw/Documents/Politechnika/Sem 5/Programowanie-aplikacji-mobilnych-i-webowych/Zadanie 3/Ex/obj/Debug/net7.0/Ex3.AssemblyInfoInputs.cache
+/Users/stanislaw/Documents/Politechnika/Sem 5/Programowanie-aplikacji-mobilnych-i-webowych/Zadanie 3/Ex/obj/Debug/net7.0/Ex3.AssemblyInfo.cs
+/Users/stanislaw/Documents/Politechnika/Sem 5/Programowanie-aplikacji-mobilnych-i-webowych/Zadanie 3/Ex/obj/Debug/net7.0/Ex3.csproj.CoreCompileInputs.cache
+/Users/stanislaw/Documents/Politechnika/Sem 5/Programowanie-aplikacji-mobilnych-i-webowych/Zadanie 3/Ex/obj/Debug/net7.0/Ex3.MvcApplicationPartsAssemblyInfo.cache
