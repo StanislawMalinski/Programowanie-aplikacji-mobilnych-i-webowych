@@ -15,6 +15,5 @@ namespace P05WeatherForecastAPI.ClientExtended.Models
         public required string LocalizedName { get; set; }
         public required Country Country { get; set; }
         public required AdministrativeArea AdministrativeArea { get; set; }
-        public required GeoPosition GeoPosition { get; set; }
     }
 }

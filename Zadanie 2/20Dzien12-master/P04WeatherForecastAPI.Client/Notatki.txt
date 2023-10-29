@@ -1,0 +1,17 @@
+1) Wdrozenie mechanizmu DI 
+  - dodanie intrefejsu do klas
+  - skonfigurowanie DI w app.cs
+
+2) Wdrozenie wzroca MVVM 
+ (wersja 1)
+  - stworzenie Viewmodelu, który implementuje  INotifyPropertyChanged
+  - stworzenie pol i wlasciwosci, które bedzeimy bindowac 
+  - pamietac o wywolywaniu propertychange zeby powiadamiac intrefejs 
+  - w widoku (xaml) ustawic bindowanie i powiadac datacontext z viewmodelem 
+  (wersja 2)
+  - w kolekcjach, które powiadamiaja widok stosujemy ObservableCollection
+  - usunelismy silne powiazanie widoku i modli na rzecz WeatherViewModel oraz CityViewModel 
+  (wersja 3)
+  - dodanie CommunityToolkit.Mvvm
+  - zamiast delegatów korzystamy Z RelayCommand
+  - zamiast domyslnych wlasciwosci uzywamy ObservableProperty

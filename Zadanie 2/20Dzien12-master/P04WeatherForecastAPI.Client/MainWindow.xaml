@@ -1,0 +1,57 @@
+﻿<Window x:Class="P04WeatherForecastAPI.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:P04WeatherForecastAPI.Client"
+        xmlns:converters="clr-namespace:P04WeatherForecastAPI.Client.Converters"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="420" Width="400">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="boolToVisConv" ></BooleanToVisibilityConverter>
+        <converters:TemperatureToDisplayConverter x:Key="tmpToDispConv"></converters:TemperatureToDisplayConverter>
+        <Style x:Key="mainButtonStyle" TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+        </Style>
+        <Style x:Key="mainLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="DarkRed"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <DockPanel Grid.Column="0" Grid.Row="0" Margin="10">
+            <Button DockPanel.Dock="Top" Content="Manage Favorite Cities" Command="{Binding OpenFavotireCitiesCommand}" Style="{StaticResource mainButtonStyle}" ></Button>
+            <Label DockPanel.Dock="Top" Content="City:" Style="{StaticResource mainLabelStyle}"></Label>
+            <TextBox DockPanel.Dock="Top" x:Name="txtCity"></TextBox>
+            <Button DockPanel.Dock="Top" x:Name="btnSearch" Content="Search" Command="{Binding LoadCitiesCommand}" CommandParameter="{Binding Text, ElementName=txtCity}" Style="{StaticResource mainButtonStyle}" ></Button>
+            <ListBox Height="200"   x:Name="lbData" ItemsSource="{Binding Cities}" SelectedItem="{Binding SelectedCity}" DisplayMemberPath="LocalizedName" Margin="0,10,0,0"></ListBox>
+        </DockPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="0" Margin="10">
+            <Label HorizontalAlignment="Center" Content="Temperature for city:" Style="{StaticResource mainLabelStyle}"></Label>
+            <Label x:Name="lblCityName" Content="{Binding SelectedCity.LocalizedName}" Style="{StaticResource mainLabelStyle}"></Label>
+            <Label Content="is:" Style="{StaticResource mainLabelStyle}"></Label>
+            <Label x:Name="lblTemperatureValue" Content="{Binding WeatherView.CurrentTemperature, Converter={StaticResource tmpToDispConv}}" Style="{StaticResource mainLabelStyle}"></Label>
+            <Label HorizontalAlignment="Center" Content="Tomorrow:" Style="{StaticResource mainLabelStyle}"></Label>
+            <Label x:Name="lblWeatherForcast" HorizontalAlignment="Center" Content="{Binding ForecastViewModel}" Style="{StaticResource mainLabelStyle}"></Label>
+            <Label HorizontalAlignment="Center" Content="Yesterday:" Style="{StaticResource mainLabelStyle}"></Label>
+            <Label x:Name="lblWeatherHistory" HorizontalAlignment="Center" Content="{Binding HistoryViewModel}" Style="{StaticResource mainLabelStyle}"></Label>
+            <Image Visibility="{Binding WeatherView.HasPrecipitation, Converter={StaticResource boolToVisConv}}" Height="100" Source="/Images/rain.jpg" />
+        </StackPanel>
+    </Grid>
+</Window>

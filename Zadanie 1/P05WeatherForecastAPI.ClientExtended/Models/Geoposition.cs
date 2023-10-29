@@ -10,5 +10,6 @@ namespace P05WeatherForecastAPI.ClientExtended.Models
     {
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+        public Elevation Elevation { get; set; }
     }
 }
