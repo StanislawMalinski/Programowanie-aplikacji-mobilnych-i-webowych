@@ -25,7 +25,7 @@ namespace P04WeatherForecastAPI.Client
 
         private void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IAccuWeatherService, AccuWeatherService>();
+            services.AddSingleton<IAccuWeatherService, DummyAccuWeatherService>();
             services.AddSingleton<IFavoriteCityService, FavoriteCityService>();
             services.AddSingleton<MainViewModelV4>();
             services.AddSingleton<FavoriteCityViewModel>();

@@ -48,9 +48,9 @@
             <Label Content="is:" Style="{StaticResource mainLabelStyle}"></Label>
             <Label x:Name="lblTemperatureValue" Content="{Binding WeatherView.CurrentTemperature, Converter={StaticResource tmpToDispConv}}" Style="{StaticResource mainLabelStyle}"></Label>
             <Label HorizontalAlignment="Center" Content="Tomorrow:" Style="{StaticResource mainLabelStyle}"></Label>
-            <Label x:Name="lblWeatherForcast" HorizontalAlignment="Center" Content="{Binding ForecastViewModel}" Style="{StaticResource mainLabelStyle}"></Label>
+            <Label x:Name="lblWeatherForcast" HorizontalAlignment="Center" Content="{Binding ForcastView.WeatherForcast}" Style="{StaticResource mainLabelStyle}"></Label>
             <Label HorizontalAlignment="Center" Content="Yesterday:" Style="{StaticResource mainLabelStyle}"></Label>
-            <Label x:Name="lblWeatherHistory" HorizontalAlignment="Center" Content="{Binding HistoryViewModel}" Style="{StaticResource mainLabelStyle}"></Label>
+            <Label x:Name="lblWeatherHistory" HorizontalAlignment="Center" Content="{Binding HistoryView.WeatherHistory}" Style="{StaticResource mainLabelStyle}"></Label>
             <Image Visibility="{Binding WeatherView.HasPrecipitation, Converter={StaticResource boolToVisConv}}" Height="100" Source="/Images/rain.jpg" />
         </StackPanel>
     </Grid>

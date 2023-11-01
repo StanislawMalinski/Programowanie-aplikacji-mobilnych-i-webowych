@@ -1,0 +1,23 @@
+{
+  "LocalObservationDateTime": "2023-11-01T06:57:00+01:00",
+  "EpochTime": 1698818220,
+  "WeatherText": "Partly sunny",
+  "WeatherIcon": 3,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": true,
+  "Temperature": {
+    "Metric": {
+      "Value": 8.9,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 48,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+}

@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia"
+  }
+},
+{
+  "Version": 1,
+  "Key": "57664",
+  "Type": "City",
+  "Rank": 23,
+  "LocalizedName": "Wafangdian",
+  "Country": {
+    "ID": "CN",
+    "LocalizedName": "China"
+  },
+  "AdministrativeArea": {
+    "ID": "LN",
+    "LocalizedName": "Liaoning"
+  }
+},
+{
+  "Version": 1,
+  "Key": "2332492",
+  "Type": "City",
+  "Rank": 25,
+  "LocalizedName": "Wanzhou District",
+  "Country": {
+    "ID": "CN",
+    "LocalizedName": "China"
+  },
+  "AdministrativeArea": {
+    "ID": "CQ",
+    "LocalizedName": "Chongqing"
+  }
+},
+{
+  "Version": 1,
+  "Key": "327659",
+  "Type": "City",
+  "Rank": 30,
+  "LocalizedName": "Washington",
+  "Country": {
+    "ID": "US",
+    "LocalizedName": "United States"
+  },
+  "AdministrativeArea": {
+    "ID": "DC",
+    "LocalizedName": "District of Columbia"
+  }
+},
+{
+  "Version": 1,
+  "Key": "226509",
+  "Type": "City",
+  "Rank": 31,
+  "LocalizedName": "Wakayama-shi",
+  "Country": {
+    "ID": "JP",
+    "LocalizedName": "Japan"
+  },
+  "AdministrativeArea": {
+    "ID": "30",
+    "LocalizedName": "Wakayama"
+  }
+},
+{
+  "Version": 1,
+  "Key": "307606",
+  "Type": "City",
+  "Rank": 31,
+  "LocalizedName": "Wad Madani",
+  "Country": {
+    "ID": "SD",
+    "LocalizedName": "Sudan"
+  },
+  "AdministrativeArea": {
+    "ID": "GZ",
+    "LocalizedName": "Gezira"
+  }
+},
+{
+  "Version": 1,
+  "Key": "2330429",
+  "Type": "City",
+  "Rank": 32,
+  "LocalizedName": "Wansan-gu",
+  "Country": {
+    "ID": "KR",
+    "LocalizedName": "South Korea"
+  },
+  "AdministrativeArea": {
+    "ID": "45",
+    "LocalizedName": "Jeollabuk-do"
+  }
+},
+{
+  "Version": 1,
+  "Key": "56941",
+  "Type": "City",
+  "Rank": 33,
+  "LocalizedName": "Wangjiang County",
+  "Country": {
+    "ID": "CN",
+    "LocalizedName": "China"
+  },
+  "AdministrativeArea": {
+    "ID": "AH",
+    "LocalizedName": "Anhui"
+  }
+},
+{
+  "Version": 1,
+  "Key": "58695",
+  "Type": "City",
+  "Rank": 33,
+  "LocalizedName": "Wangdu County",
+  "Country": {
+    "ID": "CN",
+    "LocalizedName": "China"
+  },
+  "AdministrativeArea": {
+    "ID": "HE",
+    "LocalizedName": "Hebei"
+  }
+},
+{
+  "Version": 1,
+  "Key": "58892",
+  "Type": "City",
+  "Rank": 33,
+  "LocalizedName": "Wangkui County",
+  "Country": {
+    "ID": "CN",
+    "LocalizedName": "China"
+  },
+  "AdministrativeArea": {
+    "ID": "HL",
+    "LocalizedName": "Heilongjiang"
+  }
+}

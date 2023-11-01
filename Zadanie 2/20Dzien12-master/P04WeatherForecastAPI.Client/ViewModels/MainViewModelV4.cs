@@ -24,13 +24,12 @@ namespace P04WeatherForecastAPI.Client.ViewModels
     {
         private CityViewModel _selectedCity;
         private Weather _weather;
-        private ForcastViewModel _forcast;
-        private HistoryViewModel _history; 
+        private DailyForecast _forcast;
+        private WeatherInfo _history; 
+        private City[] _neighbours;
         private readonly IAccuWeatherService _accuWeatherService;
         private readonly FavoriteCitiesView _favoriteCitiesView;
         private readonly FavoriteCityViewModel _favoriteCityViewModel;
-        //public ICommand LoadCitiesCommand { get;  }
-
 
         public MainViewModelV4(IAccuWeatherService accuWeatherService, FavoriteCityViewModel favoriteCityViewModel, FavoriteCitiesView favoriteCitiesView)
         {
@@ -43,13 +42,18 @@ namespace P04WeatherForecastAPI.Client.ViewModels
 
         [ObservableProperty]
         private WeatherViewModel weatherView;
-
+        [ObservableProperty]
+        private ForcastViewModel forcastView;
+        [ObservableProperty]
+        private HistoryViewModel historyView;
 
         public CityViewModel SelectedCity
         {
             get => _selectedCity;
             set
             {
+                if (value == null)
+                    return;
                 _selectedCity = value;
                 OnPropertyChanged();
                 LoadWeather();
@@ -61,17 +65,17 @@ namespace P04WeatherForecastAPI.Client.ViewModels
         {
             if(SelectedCity != null)
             {
-                _weather = await _accuWeatherService.GetCurrentConditions(SelectedCity.Key); 
-                var neighbours = await _accuWeatherService.GetNeighbouredCity(_selectedCity.Key);
-                var forcast = await _accuWeatherService.GetForcastForOneDay(SelectedCity.Key);
-                var history = await _accuWeatherService.GetWeatherHistory(SelectedCity.Key);
+                _weather =      await _accuWeatherService.GetCurrentConditions(SelectedCity.Key); 
+                _neighbours =   await _accuWeatherService.GetNeighbouredCity(SelectedCity.Key);
+                _forcast =      await _accuWeatherService.GetForcastForOneDay(SelectedCity.Key);
+                _history =      await _accuWeatherService.GetWeatherHistory(SelectedCity.Key);
 
-                _forcast = new ForcastViewModel(forcast);
-                _history = new HistoryViewModel(history);
                 WeatherView  = new WeatherViewModel(_weather);
-                
+                ForcastView  = new ForcastViewModel(_forcast);
+                HistoryView  = new HistoryViewModel(_history);
+
                 Cities.Clear();
-                foreach (var city in neighbours ) 
+                foreach (var city in _neighbours) 
                     Cities.Add(new CityViewModel(city));
             }
         } 
@@ -92,11 +96,13 @@ namespace P04WeatherForecastAPI.Client.ViewModels
             string pattern = @"^[A-Za-z\s\.'-]+$";
             if (IPAddress.TryParse(str, out IPAddress ipAddress))
             {
-                SelectedCity = new CityViewModel(await _accuWeatherService.GetCurrentLocationFromIP(str));
+                Cities.Clear();
+                Cities.Add(new CityViewModel(await _accuWeatherService.GetCurrentLocationFromIP(str)));
             }
             else if (IsValidLatLongFormat(str))
             {
-                SelectedCity = new CityViewModel(await _accuWeatherService.GetCurrentLocationFromGeoposition(str));
+                Cities.Clear();
+                Cities.Add(new CityViewModel(await _accuWeatherService.GetCurrentLocationFromGeoposition(str)));
             }
             else if (Regex.IsMatch(str, pattern))
             {
@@ -110,14 +116,6 @@ namespace P04WeatherForecastAPI.Client.ViewModels
                 Cities.Clear();
                 Cities.Add(new CityViewModel(new City()));
             }
-        }
-
-        [RelayCommand]
-        public void OpenFavotireCities()
-        {
-            //var favoriteCitiesView = new FavoriteCitiesView();
-            _favoriteCityViewModel.SelectedCity = new FavoriteCity() { Name = "Warsaw" };
-            _favoriteCitiesView.Show();
         }
     }
 }

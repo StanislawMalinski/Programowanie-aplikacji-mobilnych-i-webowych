@@ -1,0 +1,4385 @@
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+{
+  "Version": 1,
+  "Key": "274663",
+  "Type": "City",
+  "Rank": 20,
+  "LocalizedName": "Warsaw",
+  "EnglishName": "Warsaw",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.232,
+    "Longitude": 21.007,
+    "Elevation": {
+      "Metric": {
+        "Value": 112,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 367,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2703938",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Buraków-Warszawa",
+  "EnglishName": "Buraków-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.263,
+    "Longitude": 20.966,
+    "Elevation": {
+      "Metric": {
+        "Value": 90,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 295,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264699",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Cytadela-Warszawa",
+  "EnglishName": "Cytadela-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.264,
+    "Longitude": 21.002,
+    "Elevation": {
+      "Metric": {
+        "Value": 71,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 232,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "916",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Golędzinów-Warszawa",
+  "EnglishName": "Golędzinów-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.266,
+    "Longitude": 21.016,
+    "Elevation": {
+      "Metric": {
+        "Value": 69,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 226,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2667961",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Górny Mokotów-Warszawa",
+  "EnglishName": "Górny Mokotów-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.204,
+    "Longitude": 21.001,
+    "Elevation": {
+      "Metric": {
+        "Value": 108,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 354,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2704818",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Latawiec-Warszawa",
+  "EnglishName": "Latawiec-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.22,
+    "Longitude": 21.021,
+    "Elevation": {
+      "Metric": {
+        "Value": 102,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 334,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264702",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Mariensztat-Warszawa",
+  "EnglishName": "Mariensztat-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.246,
+    "Longitude": 21.02,
+    "Elevation": {
+      "Metric": {
+        "Value": 73,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 239,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2721628",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Muranów-Warszawa",
+  "EnglishName": "Muranów-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.244,
+    "Longitude": 20.986,
+    "Elevation": {
+      "Metric": {
+        "Value": 101,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 331,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "2688025",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Praga-Warszawa",
+  "EnglishName": "Praga-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.255,
+    "Longitude": 21.047,
+    "Elevation": {
+      "Metric": {
+        "Value": 76,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 249,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+},
+{
+  "Version": 1,
+  "Key": "264704",
+  "Type": "City",
+  "Rank": 85,
+  "LocalizedName": "Szmulki-Warszawa",
+  "EnglishName": "Szmulki-Warszawa",
+  "PrimaryPostalCode": "",
+  "Region": {
+    "ID": "EUR",
+    "LocalizedName": "Europe",
+    "EnglishName": "Europe"
+  },
+  "Country": {
+    "ID": "PL",
+    "LocalizedName": "Poland",
+    "EnglishName": "Poland"
+  },
+  "AdministrativeArea": {
+    "ID": "14",
+    "LocalizedName": "Masovia",
+    "EnglishName": "Masovia",
+    "Level": 1,
+    "LocalizedType": "Voivodship",
+    "EnglishType": "Voivodship",
+    "CountryID": "PL"
+  },
+  "TimeZone": {
+    "Code": "CET",
+    "Name": "Europe/Warsaw",
+    "GmtOffset": 1,
+    "IsDaylightSaving": false,
+    "NextOffsetChange": "2024-03-31T01:00:00Z"
+  },
+  "GeoPosition": {
+    "Latitude": 52.259,
+    "Longitude": 21.057,
+    "Elevation": {
+      "Metric": {
+        "Value": 74,
+        "Unit": "m",
+        "UnitType": 5
+      },
+      "Imperial": {
+        "Value": 242,
+        "Unit": "ft",
+        "UnitType": 0
+      }
+    }
+  },
+  "IsAlias": false,
+  "ParentCity": {
+    "Key": "274663",
+    "LocalizedName": "Warsaw",
+    "EnglishName": "Warsaw"
+  },
+  "SupplementalAdminAreas": [
+    {
+      "Level": 2,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    },
+    {
+      "Level": 3,
+      "LocalizedName": "Warsaw",
+      "EnglishName": "Warsaw"
+    }
+  ],
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "DailyPollenForecast",
+    "ForecastConfidence",
+    "FutureRadar",
+    "MinuteCast",
+    "Radar"
+  ]
+}

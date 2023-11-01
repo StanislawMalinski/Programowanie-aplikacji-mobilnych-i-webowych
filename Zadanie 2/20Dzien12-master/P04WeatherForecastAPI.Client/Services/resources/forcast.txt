@@ -1,0 +1,46 @@
+{
+"Headline": {
+  "EffectiveDate": "2023-11-05T13:00:00+01:00",
+  "EffectiveEpochDate": 1699185600,
+  "Severity": 2,
+  "Text": "Expect rainy weather Sunday afternoon through Sunday evening",
+  "Category": "rain",
+  "EndDate": "2023-11-06T01:00:00+01:00",
+  "EndEpochDate": 1699228800,
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/daily-weather-forecast/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/daily-weather-forecast/2722932?lang=en-us"
+},
+"DailyForecasts": [
+  {
+    "Date": "2023-11-01T07:00:00+01:00",
+    "EpochDate": 1698818400,
+    "Temperature": {
+      "Minimum": {
+        "Value": 42,
+        "Unit": "F",
+        "UnitType": 18
+      },
+      "Maximum": {
+        "Value": 53,
+        "Unit": "F",
+        "UnitType": 18
+      }
+    },
+    "Day": {
+      "Icon": 8,
+      "IconPhrase": "Dreary",
+      "HasPrecipitation": false
+    },
+    "Night": {
+      "Icon": 35,
+      "IconPhrase": "Partly cloudy",
+      "HasPrecipitation": false
+    },
+    "Sources": [
+      "AccuWeather"
+    ],
+    "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/daily-weather-forecast/2722932?day=1&lang=en-us",
+    "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/daily-weather-forecast/2722932?day=1&lang=en-us"
+  }
+]
+}

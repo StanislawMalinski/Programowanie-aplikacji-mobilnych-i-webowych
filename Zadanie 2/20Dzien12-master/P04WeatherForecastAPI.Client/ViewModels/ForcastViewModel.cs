@@ -11,8 +11,8 @@ namespace P04WeatherForecastAPI.Client.ViewModels
     {
         public ForcastViewModel(DailyForecast forcast)
         {
-            Weatherforcast = forcast.Day.IconPhrase;
+            WeatherForcast = forcast.Day.IconPhrase;
         }
-        public string Weatherforcast { get; set; }
+        public string WeatherForcast { get; set; }
     }
 }

@@ -1,0 +1,552 @@
+{
+  "LocalObservationDateTime": "2023-11-01T06:57:00+01:00",
+  "EpochTime": 1698818220,
+  "WeatherText": "Partly sunny",
+  "WeatherIcon": 3,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": true,
+  "Temperature": {
+    "Metric": {
+      "Value": 8.9,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 48,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-11-01T05:57:00+01:00",
+  "EpochTime": 1698814620,
+  "WeatherText": "Mostly cloudy",
+  "WeatherIcon": 38,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 10,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 50,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-11-01T04:57:00+01:00",
+  "EpochTime": 1698811020,
+  "WeatherText": "Mostly cloudy",
+  "WeatherIcon": 38,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 10,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 50,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-11-01T04:03:00+01:00",
+  "EpochTime": 1698807780,
+  "WeatherText": "Cloudy",
+  "WeatherIcon": 7,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 10,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 50,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-11-01T02:58:00+01:00",
+  "EpochTime": 1698803880,
+  "WeatherText": "Mostly cloudy",
+  "WeatherIcon": 38,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 10,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 50,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-11-01T01:57:00+01:00",
+  "EpochTime": 1698800220,
+  "WeatherText": "Mostly cloudy",
+  "WeatherIcon": 38,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 11.1,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 52,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-11-01T00:58:00+01:00",
+  "EpochTime": 1698796680,
+  "WeatherText": "Mostly cloudy",
+  "WeatherIcon": 38,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 12.2,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 54,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T23:57:00+01:00",
+  "EpochTime": 1698793020,
+  "WeatherText": "Cloudy",
+  "WeatherIcon": 7,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 12.2,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 54,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T23:05:00+01:00",
+  "EpochTime": 1698789900,
+  "WeatherText": "Cloudy",
+  "WeatherIcon": 7,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 12.2,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 54,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T21:57:00+01:00",
+  "EpochTime": 1698785820,
+  "WeatherText": "Cloudy",
+  "WeatherIcon": 7,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 12.2,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 54,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T21:02:00+01:00",
+  "EpochTime": 1698782520,
+  "WeatherText": "Light rain",
+  "WeatherIcon": 12,
+  "HasPrecipitation": true,
+  "PrecipitationType": "Rain",
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 12.2,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 54,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T19:57:00+01:00",
+  "EpochTime": 1698778620,
+  "WeatherText": "Cloudy",
+  "WeatherIcon": 7,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 12.2,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 54,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T18:57:00+01:00",
+  "EpochTime": 1698775020,
+  "WeatherText": "Cloudy",
+  "WeatherIcon": 7,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 12.8,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 55,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T17:57:00+01:00",
+  "EpochTime": 1698771420,
+  "WeatherText": "Light rain",
+  "WeatherIcon": 12,
+  "HasPrecipitation": true,
+  "PrecipitationType": "Rain",
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 13.9,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 57,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T17:02:00+01:00",
+  "EpochTime": 1698768120,
+  "WeatherText": "Cloudy",
+  "WeatherIcon": 7,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": false,
+  "Temperature": {
+    "Metric": {
+      "Value": 13.9,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 57,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T15:57:00+01:00",
+  "EpochTime": 1698764220,
+  "WeatherText": "Mostly cloudy",
+  "WeatherIcon": 6,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": true,
+  "Temperature": {
+    "Metric": {
+      "Value": 16.1,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 61,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T15:03:00+01:00",
+  "EpochTime": 1698760980,
+  "WeatherText": "Cloudy",
+  "WeatherIcon": 7,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": true,
+  "Temperature": {
+    "Metric": {
+      "Value": 16.1,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 61,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T13:58:00+01:00",
+  "EpochTime": 1698757080,
+  "WeatherText": "Cloudy",
+  "WeatherIcon": 7,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": true,
+  "Temperature": {
+    "Metric": {
+      "Value": 17.2,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 63,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T13:02:00+01:00",
+  "EpochTime": 1698753720,
+  "WeatherText": "Mostly cloudy",
+  "WeatherIcon": 6,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": true,
+  "Temperature": {
+    "Metric": {
+      "Value": 17.2,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 63,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T11:57:00+01:00",
+  "EpochTime": 1698749820,
+  "WeatherText": "Mostly cloudy",
+  "WeatherIcon": 6,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": true,
+  "Temperature": {
+    "Metric": {
+      "Value": 16.1,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 61,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T10:57:00+01:00",
+  "EpochTime": 1698746220,
+  "WeatherText": "Cloudy",
+  "WeatherIcon": 7,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": true,
+  "Temperature": {
+    "Metric": {
+      "Value": 16.1,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 61,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T09:58:00+01:00",
+  "EpochTime": 1698742680,
+  "WeatherText": "Cloudy",
+  "WeatherIcon": 7,
+  "HasPrecipitation": false,
+  "PrecipitationType": null,
+  "IsDayTime": true,
+  "Temperature": {
+    "Metric": {
+      "Value": 15,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 59,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T08:57:00+01:00",
+  "EpochTime": 1698739020,
+  "WeatherText": "Light rain",
+  "WeatherIcon": 12,
+  "HasPrecipitation": true,
+  "PrecipitationType": "Rain",
+  "IsDayTime": true,
+  "Temperature": {
+    "Metric": {
+      "Value": 13.9,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 57,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+},
+{
+  "LocalObservationDateTime": "2023-10-31T07:57:00+01:00",
+  "EpochTime": 1698735420,
+  "WeatherText": "Light rain",
+  "WeatherIcon": 12,
+  "HasPrecipitation": true,
+  "PrecipitationType": "Rain",
+  "IsDayTime": true,
+  "Temperature": {
+    "Metric": {
+      "Value": 13.9,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "Imperial": {
+      "Value": 57,
+      "Unit": "F",
+      "UnitType": 18
+    }
+  },
+  "MobileLink": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us",
+  "Link": "http://www.accuweather.com/en/pl/srodmiescie-ponocne/2722932/current-weather/2722932?lang=en-us"
+}

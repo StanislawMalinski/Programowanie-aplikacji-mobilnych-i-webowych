@@ -13,6 +13,6 @@ namespace P04WeatherForecastAPI.Client.ViewModels
         {
             WeatherHistory = weather.WeatherText;
         }
-        public string WeatherHistory { get; set; }
+        public string WeatherHistory{ get; set;}
     }
 }
