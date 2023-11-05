@@ -23,7 +23,7 @@ namespace Client.ViewModel
         private IAddFilmService _addFilmService;
 
         [ObservableProperty]
-        private FilmViewModel? selectedFilm;
+        private FilmViewModel? selectedFilm ;
 
         public AddFilmFormViewModel(IAddFilmService filmSearchService)
         {

@@ -30,7 +30,6 @@ namespace Client
             _viewModel = viewModel;
             DataContext = _viewModel;
             InitializeComponent();
-
         }
     }
 }

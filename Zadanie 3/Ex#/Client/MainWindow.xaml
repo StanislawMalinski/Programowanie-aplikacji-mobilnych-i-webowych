@@ -59,7 +59,7 @@
                     <Label Grid.Column="1" Grid.Row="2" Margin="10" HorizontalAlignment="Center" Content="{Binding SelectedFilm.Year}" Style="{StaticResource mainLabelStyle}"></Label> 
                     <Label Grid.Column="1" Grid.Row="3" Margin="10" HorizontalAlignment="Center" Content="{Binding SelectedFilm.Rating}" Style="{StaticResource mainLabelStyle}"></Label>    
             </Grid>
-            <Button DockPanel.Dock="Top" x:Name="btnDelete"  Content="Delete Selected Film" Command="{Binding DeleteFilmCommand}" CommandParameter="{Binding SelectedFilm.Id}" Style="{StaticResource mainButtonStyle}" ></Button>
+            <Button DockPanel.Dock="Top" x:Name="btnDelete"  Content="Delete Selected Film" Command="" CommandParameter="{Binding SelectedFilm.Id}" Style="{StaticResource mainButtonStyle}" ></Button>
         </StackPanel>
     </Grid>
 </Window>
