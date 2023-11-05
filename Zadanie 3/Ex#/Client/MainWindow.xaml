@@ -1,0 +1,65 @@
+<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="420" Width="400">
+ <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="boolToVisConv" ></BooleanToVisibilityConverter>
+        <Style x:Key="mainButtonStyle" TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+        </Style>
+        <Style x:Key="mainLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="DarkRed"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <DockPanel Grid.Column="0" Grid.Row="0" Margin="10">
+            <Button DockPanel.Dock="Top" x:Name="btnAdd"  Content="Add New Film" Command="{Binding OpenAddFilmWindowCommand}" Style="{StaticResource mainButtonStyle}" ></Button>
+            <Button DockPanel.Dock="Top" x:Name="btnLoad" Content="Load Films"   Command="{Binding LoadTopFilmsCommand}"      Style="{StaticResource mainButtonStyle}" ></Button>        
+            <ListBox Height="200"   x:Name="lbData" ItemsSource="{Binding Films}" SelectedItem="{Binding SelectedFilm}" DisplayMemberPath="Title" Margin="0,10,0,0"></ListBox>
+        </DockPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="0" Margin="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" Margin="10" HorizontalAlignment="Center" Content="Film title: " Style="{StaticResource mainLabelStyle}"></Label>
+                    <Label Grid.Column="0" Grid.Row="1" Margin="10" HorizontalAlignment="Center" Content="Directory: " Style="{StaticResource mainLabelStyle}"></Label>
+                    <Label Grid.Column="0" Grid.Row="2" Margin="10" HorizontalAlignment="Center" Content="Realese year " Style="{StaticResource mainLabelStyle}"></Label>
+                    <Label Grid.Column="0" Grid.Row="3" Margin="10" HorizontalAlignment="Center" Content="Rating: " Style="{StaticResource mainLabelStyle}"></Label>
+                    <Label Grid.Column="1" Grid.Row="0" Margin="10" HorizontalAlignment="Center" Content="{Binding SelectedFilm.Title}" Style="{StaticResource mainLabelStyle}"></Label> 
+                    <Label Grid.Column="1" Grid.Row="1" Margin="10" HorizontalAlignment="Center" Content="{Binding SelectedFilm.Director}" Style="{StaticResource mainLabelStyle}"></Label> 
+                    <Label Grid.Column="1" Grid.Row="2" Margin="10" HorizontalAlignment="Center" Content="{Binding SelectedFilm.Year}" Style="{StaticResource mainLabelStyle}"></Label> 
+                    <Label Grid.Column="1" Grid.Row="3" Margin="10" HorizontalAlignment="Center" Content="{Binding SelectedFilm.Rating}" Style="{StaticResource mainLabelStyle}"></Label>    
+            </Grid>
+            <Button DockPanel.Dock="Top" x:Name="btnDelete"  Content="Delete Selected Film" Command="{Binding DeleteFilmCommand}" CommandParameter="{Binding SelectedFilm.Id}" Style="{StaticResource mainButtonStyle}" ></Button>
+        </StackPanel>
+    </Grid>
+</Window>

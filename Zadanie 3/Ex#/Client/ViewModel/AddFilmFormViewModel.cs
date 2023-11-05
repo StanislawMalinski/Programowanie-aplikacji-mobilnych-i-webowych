@@ -14,6 +14,7 @@ using System.Windows.Input;
 
 using Client.Model;
 using Client.Services;
+using Client.Commands;
 
 namespace Client.ViewModel
 {
@@ -21,10 +22,8 @@ namespace Client.ViewModel
     {
         private IAddFilmService _addFilmService;
 
-        private ObservableCollection<FilmModel> _films;
-
         [ObservableProperty]
-        private FilmViewModel selectedFilm;
+        private FilmViewModel? selectedFilm;
 
         public AddFilmFormViewModel(IAddFilmService filmSearchService)
         {
@@ -34,11 +33,13 @@ namespace Client.ViewModel
         [RelayCommand]
         public void PutFilm()
         {
-            FilmModel film = selectedFilm.toFilmModel();
-            if (selectedFilm.Id != null){
-                _addFilmService.UpdateFilm(selectedFilm.toFilmModel());
+            if (SelectedFilm == null)
+                return;
+            FilmModel film = SelectedFilm.toFilmModel();
+            if (SelectedFilm.Id > 0){
+                _addFilmService.UpdateFilm(SelectedFilm.toFilmModel());
             } else{
-                _addFilmService.AddFilm(selectedFilm.toFilmModel());
+                _addFilmService.AddFilm(SelectedFilm.toFilmModel());
             }
         }
     }

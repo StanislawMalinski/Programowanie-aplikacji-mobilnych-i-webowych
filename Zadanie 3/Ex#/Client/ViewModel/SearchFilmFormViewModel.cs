@@ -29,7 +29,7 @@ namespace Client.ViewModel
 
         public void filterFilms()
         {
-            FilterRequest filterInst = filter.toFilterRequest();
+            FilterRequest filterInst = Filter.toFilterRequest();
             List<FilmModel> films = _filmSearchService.SearchFilms(filterInst);
             _films = films;
         }

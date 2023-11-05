@@ -1,10 +1,13 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
-using System.Windows;
-
+﻿using Microsoft.Extensions.DependencyInjection;
 using Client.Services;
 using Client.ViewModel;
-using Client.Windows;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
 
 namespace Client
 {
@@ -18,10 +21,9 @@ namespace Client
 
         public App()
         {
-            var serviceCollection = new ServiceCollection();
-            ConfigureServices(serviceCollection);
-            _serviceProvider = serviceCollection.BuildServiceProvider();
-
+            ServiceCollection service = new ServiceCollection();
+            ConfigureServices(service);
+            _serviceProvider = service.BuildServiceProvider();
         }
 
         private void ConfigureServices(IServiceCollection services)
@@ -31,6 +33,8 @@ namespace Client
             services.AddSingleton<IFilmSearchService, FilmSearchService>();
 
             services.AddSingleton<MainWindowViewModel>();
+            services.AddSingleton<SearchFilmFormViewModel>();
+            services.AddSingleton<AddFilmFormViewModel>();
 
             services.AddTransient<SearchFilmForm>();
             services.AddTransient<AddFilmForm>();
@@ -39,6 +43,7 @@ namespace Client
 
         private void OnStartup(object sender, StartupEventArgs e)
         {
+            Console.WriteLine("OnStartup");
             var mainWindow = _serviceProvider.GetService<MainWindow>();
             mainWindow.Show();
         }

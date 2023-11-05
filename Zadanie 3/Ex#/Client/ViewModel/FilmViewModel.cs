@@ -10,6 +10,13 @@ namespace Client.Model
     {
         public FilmViewModel()
         {
+            Id = -1;
+            Title = "";
+            Year = 0;
+            Director = "";
+            Actors = new List<Actor>();
+            Genre = "";
+            Rating = 0;
         }
         
         public FilmViewModel(FilmModel film)

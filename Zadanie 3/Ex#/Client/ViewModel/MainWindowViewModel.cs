@@ -13,7 +13,7 @@ using System.Windows.Input;
 
 using Client.Model;
 using Client.Services;
-using Client.Windows;
+using Client.Commands;
 
 namespace Client.ViewModel
 {
@@ -22,25 +22,28 @@ namespace Client.ViewModel
     {
         private FilmViewModel _selectedFilm;
         private FilmModel _film;
-        private readonly IFilmClientService _filmClientService;
-        private IAddFilmService _addFilmService;
-        private IFilmSearchService _filmSearchService;
+        private IFilmClientService _filmClientService;
 
 
-        private readonly AddFilmForm _addFilmWindow;
-        private readonly SearchFilmForm _searchWindow;
-
+        private AddFilmForm _addFilmWindow;
+        private AddFilmFormViewModel _addFilmModel;
+        private SearchFilmForm _searchWindow;
+        private SearchFilmFormViewModel _searchFilmModel;
 
         public ObservableCollection<FilmViewModel> Films { get; set; }
 
 
-        public MainWindowViewModel(IFilmClientService filmClientService , 
-                                    IAddFilmService addFilmService, 
-                                    IFilmSearchService filmSearchService)
+        public MainWindowViewModel(IFilmClientService filmClientService ,
+                    AddFilmForm addFilmWindow, 
+                    AddFilmFormViewModel addFilmModel,
+                    SearchFilmForm searchWindow,
+                    SearchFilmFormViewModel searchFilmModel)
         {
             _filmClientService = filmClientService;
-            _addFilmService = addFilmService;
-            _filmSearchService = filmSearchService;
+            _addFilmWindow = addFilmWindow;
+            _addFilmModel = addFilmModel;
+            _searchWindow = searchWindow;
+            _searchFilmModel = searchFilmModel;
 
             Films = new ObservableCollection<FilmViewModel>();
         }
@@ -67,7 +70,7 @@ namespace Client.ViewModel
             if (SelectedFilm != null)
             {
                 _film = await _filmClientService.GetFilmById(SelectedFilm.Id);
-                filmView = new FilmViewModel(_film);
+                FilmView = SelectedFilm;
             }
         }
 
@@ -94,6 +97,9 @@ namespace Client.ViewModel
         public async void DeleteFilm(int id)
         {
             await _filmClientService.DeleteFilm(id);
+            SelectedFilm = new FilmViewModel();
+
+            LoadTopFilms();
         }
 
         [RelayCommand]
@@ -105,14 +111,16 @@ namespace Client.ViewModel
         [RelayCommand]
         public void OpenAddFilmWindow()
         {
-           _addFilmService.SetFilm(new FilmViewModel());
+           _addFilmModel.SelectedFilm = new FilmViewModel();
            _addFilmWindow.Show();
         }
 
         [RelayCommand]
         public void OpenUpdateFilmWondow()
         {
-            _addFilmService.SetFilm(filmView);
+            if (FilmView == null)
+                return;
+            _addFilmModel.SelectedFilm = FilmView;
             _addFilmWindow.Show();
         }
     }
