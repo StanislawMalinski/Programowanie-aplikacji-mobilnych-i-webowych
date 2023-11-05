@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Films.Model;
 using Films.Services;
+using System.Numerics;
 
 namespace Films.Controllers
 {
@@ -16,60 +17,69 @@ namespace Films.Controllers
         }
 
         [HttpGet("main")] //https://localhost:5001/api/film/main
-        public IEnumerable<Boolean> GetMain()
+        public ActionResult<bool> GetMain()
         {
-            var resp = Enumerable.Empty<Boolean>();
-            return resp.Append(_filmService.GetMain());
+            bool isMain = _filmService.GetMain();
+            return Ok(isMain);
         }
 
         [HttpGet("all")] //https://localhost:5001/api/film/all
-        public IEnumerable<List<FilmModel>> GetFilms()
+        public ActionResult<IEnumerable<FilmModel>> GetAllFilms()
         {
-            var resp = Enumerable.Empty<List<FilmModel>>();
-            return resp.Append(_filmService.GetFilms());
+            var films = _filmService.GetFilms();
+            if (films == null || !films.Any())
+            {
+                return NotFound();
+            }
+            return Ok(films);
         }
 
-        [HttpGet("Top10")] //https://localhost:5001/api/film/Top50
-        public IEnumerable<List<FilmModel>> GetTop10()
+        [HttpGet("Top10")] //https://localhost:5001/api/film/Top10
+        public IEnumerable<FilmModel> GetTop10()
         {
-            var resp = Enumerable.Empty<List<FilmModel>>();
-            return resp.Append(_filmService.GetTop10());
+            return _filmService.GetFilms()
+                .OrderByDescending(f => f.Rating)
+                .Take(10);
         }
 
-        [HttpGet("getfilm/{id}")] //https://localhost:5001/api/film/getfilm/1
-        public IEnumerable<FilmModel> GetFilmById(int id)
+        [HttpGet("films/{id}")] //https://localhost:5001/api/film/films/1
+        public ActionResult<FilmModel> GetFilmById(int id)
         {
-            var resp = Enumerable.Empty<FilmModel>();
-            return resp.Append(_filmService.GetFilmById(id));
+            var film = _filmService.GetFilmById(id);
+            if (film == null)
+            {
+                return NotFound();
+            }
+            return Ok(film);
         }
 
         [HttpGet("filter")] //https://localhost:5001/api/film/filter?Genre=action&RatingLow=5&RatingHigh=10
-        public IEnumerable<List<FilmModel>> GetFilmsByFilter([FromQuery] FilterRequest filter)
+        public ActionResult<List<FilmModel>> GetFilmsByFilter([FromQuery] FilterRequest filter)
         {
             var resp = Enumerable.Empty<List<FilmModel>>();
-            return resp.Append(_filmService.GetFilmsByFilter(filter));
+            return Ok(_filmService.GetFilmsByFilter(filter));
         }
 
         [HttpPost("add")] //https://localhost:5001/api/film/add
         [HttpPost("create")] //https://localhost:5001/api/film/create
-        public IEnumerable<Boolean> PostFilm([FromBody] FilmModel film)
+        public ActionResult<Boolean> PostFilm([FromBody] FilmModel film)
         {
-            var resp = Enumerable.Empty<Boolean>();
-            return resp.Append(_filmService.PostFilm(film));
+            bool resp = _filmService.PostFilm(film);
+            return Ok(resp);
         }
         
         [HttpPut("update/{id}")] //https://localhost:5001/api/film/update/1
-        public IEnumerable<Boolean>  PutFilm(int id, [FromBody] FilmModel film)
+        public ActionResult<Boolean>  PutFilm(int id, [FromBody] FilmModel film)
         {
-            var resp = Enumerable.Empty<Boolean>();
-            return resp.Append(_filmService.PutFilm(id, film));
+            bool resp = _filmService.PutFilm(id, film);
+            return Ok(resp);
         }
 
         [HttpDelete("delete/{id}")] //https://localhost:5001/api/film/delete/1
-        public IEnumerable<Boolean>  DeleteFilm(int id)
+        public ActionResult<Boolean>  DeleteFilm(int id)
         {
-            var resp = Enumerable.Empty<Boolean>();
-            return resp.Append(_filmService.DeleteFilm(id));
+            bool resp = _filmService.DeleteFilm(id);
+            return Ok(resp);
         }
     }
 }
