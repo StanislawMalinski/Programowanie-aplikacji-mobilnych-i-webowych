@@ -1,4 +1,4 @@
-using Films.Model;
+using Shared.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Films.Services

@@ -1,5 +1,5 @@
 using CommunityToolkit.Mvvm.ComponentModel;
-using Client.Model;
+using Shared.Model;
 using Client.Services;
 using System;
 using System.Collections.Generic;

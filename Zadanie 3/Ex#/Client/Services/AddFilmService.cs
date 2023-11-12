@@ -1,7 +1,7 @@
 
 using System;
 using System.Threading.Tasks;
-using Client.Model;
+using Shared.Model;
 
 namespace Client.Services
 {

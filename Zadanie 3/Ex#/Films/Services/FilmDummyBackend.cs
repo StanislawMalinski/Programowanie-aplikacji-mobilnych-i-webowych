@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Reflection;
 using System.Security.Authentication;
-using Films.Model;
+using Shared.Model;
 using Microsoft.AspNetCore.Mvc;
 
 

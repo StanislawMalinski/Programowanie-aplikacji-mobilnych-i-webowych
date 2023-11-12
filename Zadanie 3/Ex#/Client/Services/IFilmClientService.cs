@@ -1,4 +1,4 @@
-using Client.Model;
+using Shared.Model;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;

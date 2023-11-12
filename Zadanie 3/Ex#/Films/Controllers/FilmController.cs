@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Films.Model;
+using Shared.Model;
 using Films.Services;
 using System.Numerics;
 

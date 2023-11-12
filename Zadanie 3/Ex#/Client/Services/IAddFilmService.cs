@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using Client.Model;
+using Shared.Model;
 using Client.ViewModel;
 
 namespace Client.Services

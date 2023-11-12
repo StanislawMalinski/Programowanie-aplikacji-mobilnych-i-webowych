@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-using Client.Model;
+using Shared.Model;
 using Client.Services;
 using Client.Commands;
 
