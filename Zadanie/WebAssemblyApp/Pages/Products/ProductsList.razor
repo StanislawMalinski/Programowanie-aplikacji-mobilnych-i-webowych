@@ -1,0 +1,117 @@
+﻿@page "/products/productsList"
+
+@inject IProductService ProductService
+@inject NavigationManager NavigationManager
+
+<h3>Full list of products</h3>
+
+
+<p>
+    <a href="products/createproduct">Create new product</a>
+</p>
+
+@if (products == null)
+{
+    <p><em>@message</em></p>
+}
+
+else
+{
+    <div>
+        <InputText @bind-Value=searchTerm></InputText>
+        <button class="btn btn-primary" @onclick=Search>Search</button>
+    </div>
+    
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Barcode</th>
+                <th>Price</th>
+                <th>Release Date</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in products)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Title</td>
+                    <td>@product.Barcode</td>
+                    <td>@product.Price</td>
+                    <td>@product.ReleaseDate.ToShortDateString()</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="()=> GoToEdit(product.Id)">Edit</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary" disabled="@(currentPage==1)" @onclick="PreviousPage">Previous</button>
+    <span>@currentPage</span>
+    <button class="btn btn-primary" @onclick="NextPage">Next</button>
+}
+
+
+
+@code {
+    private List<Product> products;
+    private string message = "Loading products...";
+
+    private int currentPage = 1;
+    private const int pageSize = 10;
+
+    private string searchTerm = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await  LoadProducts();
+    }
+
+    private async Task LoadProducts()
+    {
+        var response = await ProductService.SearchProductsAsync(searchTerm, currentPage, pageSize);
+        if (response.Success)
+        {
+            products = response.Data;
+            //.Skip(pageSize * (currentPage - 1))
+            //.Take(pageSize)
+            //.ToList();
+        }
+        else
+        {
+            message = response.Message;
+        }
+    }
+
+
+    void GoToEdit(int id)
+    {
+        NavigationManager.NavigateTo($"/products/editproduct/{id}");
+    }
+
+    private async Task PreviousPage()
+    {
+        if (currentPage > 1)
+        {
+            currentPage--;
+            await LoadProducts();
+        }
+    }
+    private async Task NextPage()
+    {
+        currentPage++;
+        await LoadProducts();
+    }
+
+    private async Task Search()
+    {
+        currentPage = 1;
+        await LoadProducts();
+    }
+}

@@ -1,0 +1,41 @@
+﻿@page "/newCalculatorValidation"
+@using System.ComponentModel.DataAnnotations;
+
+<h3>NewCalculator</h3>
+
+
+<EditForm Model="model" OnValidSubmit="Sum">
+    <DataAnnotationsValidator />
+    <div>
+        <InputNumber @bind-Value="model.Number1" />
+        <ValidationMessage For="@(()=> model.Number1)" />
+        <InputNumber @bind-Value="model.Number2" />
+        <ValidationMessage For="@(()=> model.Number2)" />
+        <button type="submit">Add</button>
+    </div>
+
+</EditForm>
+
+<p>Wynik: @model.Result</p>
+
+@code {
+
+    public class OperationModel
+    {
+        [Range(0, double.MaxValue, ErrorMessage ="Number 1 must be positive")]
+        public double Number1 { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = "Number 2 must be positive")]
+        public double Number2 { get; set; }
+        public double Result { get; set; }
+    }
+
+    OperationModel model = new OperationModel();
+
+
+    void Sum()
+    {
+        model.Result = model.Number1 + model.Number2;
+    }
+
+}

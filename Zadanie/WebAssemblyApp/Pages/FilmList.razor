@@ -1,0 +1,51 @@
+@page "/filmlist"
+@using Shared.Model
+@using Shared.Services
+
+<h3>Movie List</h3>
+
+@if (films == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Director</th>
+                <th>Genre</th>
+                <th>Rating</th>
+                <th>Year</th>
+            </tr>            
+        </thead>
+        <tbody>
+            @foreach (var film in films)
+            {
+                <tr>
+                    <td>@film.Title</td>
+                    <td>@film.Director</td>
+                    <td>@film.Genre</td>
+                    <td>@film.Rating</td>
+                    <td>@film.Year</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<FilmModel>? films;
+
+    [Inject]
+    private IFilmClientService _filmService { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(1500);
+
+        films = await _filmService.GetAllFilms();
+    }
+}

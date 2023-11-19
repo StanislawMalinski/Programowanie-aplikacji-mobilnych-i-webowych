@@ -1,0 +1,53 @@
+﻿@page "/products/editproduct/{Id:int}"
+
+@inject IProductService ProductService
+@inject NavigationManager NavigationManager
+
+<h3>Edit Product</h3>
+
+@if (product == null)
+{
+    <p><em>@message</em></p>
+}
+else
+{
+    <ProductForm product="product" OnValidSubmit="HandleValidSubmit"></ProductForm>
+    <button class="btn btn-danger" @onclick=HandleDelete>Delete</button>
+}
+
+
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Product product;
+    private string message = "Loading product...";
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await ProductService.GetProductByIdAsync(Id);
+        if (response.Success)
+            product = response.Data;
+        else
+            message = response.Message;
+    }
+
+    async Task HandleValidSubmit()
+    {
+        var response = await ProductService.UpdateProductAsync(product);
+        if (response.Success)
+            NavigationManager.NavigateTo("/products/productsList");
+        else
+            message = response.Message;
+    }
+
+    async Task HandleDelete()
+    {
+        var response = await ProductService.DeleteProductAsync(Id);
+        if (response.Success)
+            NavigationManager.NavigateTo("/products/productsList");
+        else
+            message = response.Message;
+    }
+}
