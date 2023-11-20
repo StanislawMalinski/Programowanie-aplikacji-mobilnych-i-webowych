@@ -1,4 +1,6 @@
 @page "/filmlist"
+@inject NavigationManager NavigationManager
+@inject IFilmClientService _filmService
 @using Shared.Model
 @using Shared.Services
 
@@ -29,23 +31,64 @@ else
                     <td>@film.Genre</td>
                     <td>@film.Rating</td>
                     <td>@film.Year</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="()=> GoToEdit(film.Id)">Edit</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="()=> DeleteFilm(film.Id)">Delete</button>
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
 }
 
+<button class="btn btn-primary" disabled="@(Page == 1)" @onclick="()=> PreviousPage()">Previous</button>
+
+<p><em>@Page/@MaxPage</em></p>
+
+<button class="btn btn-primary" disabled="@(Page == MaxPage)" @onclick="()=> NextPage()">Next</button>
+
 @code {
     private List<FilmModel>? films;
+    private int Page = 1;
+    private int MaxPage;
 
-    [Inject]
-    private IFilmClientService _filmService { get; set; }
-
+    private async Task Load()
+    {
+        Page = Math.Min(Page, MaxPage);
+        films = await _filmService.GetPage(Page);
+    }
 
     protected override async Task OnInitializedAsync()
     {
-        await Task.Delay(1500);
+        await Task.Delay(50);
+        Page = 1;
+        MaxPage = await _filmService.GetPagesCount();
+        await Load();
+    }
 
-        films = await _filmService.GetAllFilms();
+    protected async void PreviousPage()
+    {
+        Page--;
+        await Load();
+    }
+
+    protected async void NextPage()
+    {
+        Page++;
+        await Load();
+    }
+
+    protected void GoToEdit(int id)
+    {
+        NavigationManager.NavigateTo($"/filmedit/{id}");
+    }
+
+    protected async void DeleteFilm(int id)
+    {
+        await _filmService.DeleteFilm(id);
+        MaxPage = await _filmService.GetPagesCount();
+        await Load(); 
     }
 }

@@ -19,11 +19,11 @@ var uriBuilder = new UriBuilder(appSettingsSection.BaseAPIUrl)
     Path = appSettingsSection.BaseProductEndpoint.Base_url,
 };
 //Microsoft.Extensions.Http
-builder.Services.AddHttpClient<IProductService, ProductService>(client => client.BaseAddress = uriBuilder.Uri);
+//builder.Services.AddHttpClient<IFilmClientService, FilmClientService>(client => client.BaseAddress = uriBuilder.Uri);
+builder.Services.AddSingleton<IFilmClientService, FilmClientService>();
 //builder.Services.Configure<AppSettings>(appSettings);
 builder.Services.AddSingleton<IOptions<AppSettings>>(new OptionsWrapper<AppSettings>(appSettingsSection));
-builder.Services.AddSingleton<IAddFilmService, AddFilmService>();
-builder.Services.AddSingleton<IFilmClientService, FilmClientService>();
-builder.Services.AddSingleton<IFilmSearchService, FilmSearchService>();
+
+
 
 await builder.Build().RunAsync();

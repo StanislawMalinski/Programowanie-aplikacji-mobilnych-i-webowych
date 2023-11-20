@@ -1,6 +1,6 @@
 {
-  "name": "WebAssemblyApp.Client",
-  "short_name": "WebAssemblyApp.Client",
+  "name": "WebAssemblyApp",
+  "short_name": "WebAssemblyApp",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",

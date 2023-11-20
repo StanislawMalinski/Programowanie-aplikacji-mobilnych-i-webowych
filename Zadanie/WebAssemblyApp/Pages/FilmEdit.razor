@@ -1,0 +1,67 @@
+@page "/filmedit/{id:int}"
+@inject NavigationManager NavigationManager
+@inject IFilmClientService _filmService
+@using Shared.Services
+@using Shared.Model 
+
+<h3>Edit Film</h3>
+
+@if(film != null){
+    <EditForm Model="film" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <InputText id="title" @bind-Value="film.Title" class="form-control"></InputText>
+        </div>
+        <div class="form-group">
+            <label for="director">Director:</label>
+            <InputText id="director" @bind-Value="film.Director" class="form-control"></InputText>
+        </div>
+        <div class="form-group">
+            <label for="genre">Genre:</label>
+            <InputText id="genre" @bind-Value="film.Genre" class="form-control"></InputText>
+        </div>
+        <div class="form-group">
+            <label for="year">Year:</label>
+            <InputNumber id="year" @bind-Value="film.Year" class="form-control"></InputNumber>
+        </div>
+        <div class="form-group">
+            <label for="rating">Rating:</label>
+            <InputNumber id="rating" @bind-Value="film.Rating" class="form-control"></InputNumber>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </EditForm>
+}
+else{
+    <p><em>@massage</em></p>
+}
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+
+    private FilmModel film;
+    private string massage = "Loading...";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(1500);
+        var response = await _filmService.GetFilmById(id);
+        if (response != null)
+        {
+            film = response;
+        }
+    }
+
+    protected async Task HandleValidSubmit()
+    {
+        try{
+            var response = await _filmService.UpdateFilm(film);
+            NavigationManager.NavigateTo("/filmlist");
+        } catch(Exception ex){
+            
+        }
+        
+    }
+}

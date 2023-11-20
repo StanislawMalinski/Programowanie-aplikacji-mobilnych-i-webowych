@@ -1,0 +1,38 @@
+@using Shared.Model 
+
+<EditForm Model="film" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <InputText id="title" @bind-Value="film.Title" class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="director">Director:</label>
+        <InputText id="director" @bind-Value="film.Director" class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="genre">Genre:</label>
+        <InputText id="genre" @bind-Value="film.Genre" class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="year">Year:</label>
+        <InputNumber id="year" @bind-Value="film.Year" class="form-control"></InputNumber>
+    </div>
+    <div class="form-group">
+        <label for="rating">Rating:</label>
+        <InputNumber id="rating" @bind-Value="film.Rating" class="form-control"></InputNumber>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</EditForm>
+
+
+@code {
+
+    [Parameter]
+    public FilmModel film { get; set; }
+
+    [Parameter]
+    public EventCallback OnValidSubmit { get; set; }
+
+}
