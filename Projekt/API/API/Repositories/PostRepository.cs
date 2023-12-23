@@ -5,14 +5,10 @@ using Microsoft.EntityFrameworkCore;
 public class PostRepository : IPostRepository
 {
     private readonly AppDbContext _dbContext;
-    private readonly IUserProfileRepository _userProfileRepository;
-    private readonly ICommentRepository _commentRepository;
 
-    public PostRepository(AppDbContext dbContext, IUserProfileRepository userProfileRepository, ICommentRepository commentRepository)
+    public PostRepository(AppDbContext dbContext)
     {
         _dbContext = dbContext;
-        _userProfileRepository = userProfileRepository;
-        _commentRepository = commentRepository;
     }
 
     public Post GetPost(int postId)
@@ -22,7 +18,7 @@ public class PostRepository : IPostRepository
                         join c in _dbContext.Comments on p.Id equals c.PostId into comments
                         where p.Id == postId
                         select mapDtoToPost(p, new UserProfile(u), comments.Select(c => new Comment(c)).ToList()))
-                        .FirstOrDefault();
+                        .FirstOrDefault() ?? new Post();
     }
 
     public IEnumerable<Post> GetPagedPostsForUserProfile(int userId, int page, int pageSize)
@@ -52,6 +48,7 @@ public class PostRepository : IPostRepository
 
     public List<Post> GetAllPosts()
     {
+
         return (from p in _dbContext.Posts
                 join u in _dbContext.Users on p.UserId equals u.Id
                 join c in _dbContext.Comments on p.Id equals c.PostId into comments

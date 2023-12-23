@@ -7,39 +7,38 @@ namespace API.Repositories.Seeder.Seeder
     {
         private Random rand;
 
-        private int Id = 0;
+        private int Id = 1;
 
         public Generator(int seed)
         {
             rand = new Random(seed);
         }
 
-        private string getLoremIpsum(int minWords, int maxWords)
+        private string getLoremIpsum(int numWords)
         {
             var words = new[] { "lorem", "ipsum", "dolor", "sit", "amet", "consectetuer", "adipiscing", "elit", "sed", "diam", "nonummy", "nibh", "euismod", "tincidunt", "ut", "laoreet", "dolore", "magna", "aliquam", "erat" };
 
-
-            int numWords = rand.Next(maxWords - minWords) + minWords + 1;
             int numSentences = (int)Math.Floor((double)numWords / 10);
-
             var sb = new StringBuilder();
-            for (int s = 0; s < numSentences; s++)
+            for (int w = 0; w < numWords; w++)
             {
-                for (int w = 0; w < numWords; w++)
-                {
-                    if (w > 0) { sb.Append(" "); }
-                    sb.Append(words[rand.Next(words.Length)]);
-                }
-                sb.Append(". ");
+                if (w > 0) { sb.Append(" "); }
+                sb.Append(words[rand.Next(words.Length)]);
             }
+            sb.Append(". ");
             return sb.ToString();
         }
 
         public string getName()
         {
             List<string> name = new(["Kasia", "Basia", "Jasia", "Asia"]);
-            List<string> surname = new(["Kowalska", "Robalska", "Porowska", "Kubowska"]);
-            return name[rand.Next(name.Count)] + " " + surname[rand.Next(surname.Count)];
+            return name[rand.Next(name.Count)];
+        }
+
+        public string getSurName()
+        {
+            List<string> UserName = new(["Kowalska", "Robalska", "Porowska", "Kubowska"]);
+            return UserName[rand.Next(UserName.Count)];
         }
 
         public string getMail()
@@ -49,10 +48,14 @@ namespace API.Repositories.Seeder.Seeder
             return nick[rand.Next(nick.Count)] + rand.Next(100) + "@" + domains[rand.Next(domains.Count)];
         }
 
-        public DateTime getRandomDate(DateTime from, DateTime to)
+        public DateTime getRandomDate(DateTime from, DateTime  to)
         {
             int range = (to - from).Days;
-            return from.AddDays(rand.Next(range));
+            var date = from.AddDays(rand.Next(range));
+            date.AddHours(rand.Next(24));
+            date.AddMinutes(rand.Next(60));
+            date.AddSeconds(rand.Next(60));
+            return date;
         }
 
         public UserProfile getNewUser()
@@ -60,8 +63,8 @@ namespace API.Repositories.Seeder.Seeder
             UserProfile user = new UserProfile();
             user.Id = Id++;
             user.Email = getMail();
-            user.UserName = getName();
-            user.Bio = getLoremIpsum(10, 50);
+            user.UserName = getName() + " " + getSurName();
+            user.Bio = getLoremIpsum(10);
             return user;
         }
 
@@ -79,9 +82,9 @@ namespace API.Repositories.Seeder.Seeder
         {
             Post post = new Post();
             post.Id = Id++;
-            post.Title = getLoremIpsum(3, 7);
-            post.Content = getLoremIpsum(3, 50);
-            post.CreatedAt = getRandomDate(new DateTime(1999, 1, 1), DateTime.Today);
+            post.Title = getLoremIpsum(7);
+            post.Content = getLoremIpsum(20);
+            post.CreatedAt = getRandomDate(new DateTime(2023, 12, 1), DateTime.Today);
             post.User = user;
             post.Comments = new List<Comment>();
             return post;
@@ -103,7 +106,7 @@ namespace API.Repositories.Seeder.Seeder
             comment.Id = Id++;
             comment.User = user;
             comment.CreatedAt = getRandomDate(post.CreatedAt, DateTime.Today);
-            comment.Text = getLoremIpsum(3, 50);
+            comment.Text = getLoremIpsum(8);
             comment.PostId = post.Id;
             return comment;
         }

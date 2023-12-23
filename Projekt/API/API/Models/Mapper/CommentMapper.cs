@@ -13,7 +13,7 @@ namespace API.Models.Mapper
             {
                 Id = dto.Id,
                 Text = dto.Text,
-                CreatedAt = dto.CreatedAt,
+                CreatedAt = DateTime.ParseExact(dto.CreatedAt, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture),
                 User = user,
                 PostId = post.Id
             };
@@ -30,7 +30,7 @@ namespace API.Models.Mapper
             {
                 Id = dto.Id,
                 Text = dto.Text,
-                CreatedAt = dto.CreatedAt,
+                CreatedAt = DateTime.ParseExact(dto.CreatedAt, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture),
                 User = user,
                 PostId = postId
             };
@@ -47,7 +47,7 @@ namespace API.Models.Mapper
             {
                 Id = comment.Id,
                 Text = comment.Text,
-                CreatedAt = comment.CreatedAt,
+                CreatedAt = comment.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss"),
                 UserId = comment.User.Id,
                 PostId = comment.PostId
             };

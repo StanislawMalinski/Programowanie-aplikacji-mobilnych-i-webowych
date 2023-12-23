@@ -7,7 +7,7 @@ public class Comment
     {
         Id = dto.Id;
         Text = dto.Text;
-        CreatedAt = dto.CreatedAt;
+        CreatedAt = DateTime.ParseExact(dto.CreatedAt, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
     }
     public int Id { get; set; }
     public string Text { get; set; }

@@ -15,7 +15,7 @@ public class UserProfileRepository : IUserProfileRepository
         return (from u in _dbContext.Users
                 where u.Id == userId
                 select mapDtoToUser(u))
-                .FirstOrDefault();
+                .FirstOrDefault() ?? new UserProfile();
                 
     }
 

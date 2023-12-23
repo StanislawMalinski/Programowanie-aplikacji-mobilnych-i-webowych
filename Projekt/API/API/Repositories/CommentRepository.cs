@@ -18,7 +18,7 @@ public class CommentRepository : ICommentRepository
                 join u in _dbContext.Users on c.UserId equals u.Id
                 where c.Id == commentId
                 select mapDtoToComment(c, new UserProfile(u), c.PostId))
-                .FirstOrDefault();
+                .FirstOrDefault() ?? new Comment();
     }
 
     public IEnumerable<Comment> GetCommentsForPost(int postId)

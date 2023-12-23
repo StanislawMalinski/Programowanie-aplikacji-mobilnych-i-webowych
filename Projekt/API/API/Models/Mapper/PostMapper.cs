@@ -14,7 +14,7 @@ namespace API.Models.Mapper
                 Id = dto.Id,
                 Title = dto.Title,
                 Content = dto.Content,
-                CreatedAt = dto.CreatedAt,
+                CreatedAt = DateTime.ParseExact(dto.CreatedAt, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture),
                 User = user,
                 Comments = comments
             };
@@ -32,7 +32,7 @@ namespace API.Models.Mapper
                 Id = post.Id,
                 Title = post.Title,
                 Content = post.Content,
-                CreatedAt = post.CreatedAt,
+                CreatedAt = post.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss"),
                 UserId = post.User.Id
             };
         }

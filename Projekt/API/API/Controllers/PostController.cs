@@ -54,6 +54,18 @@ public class PostController : ControllerBase
         return Ok(posts);
     }
 
+    [HttpGet("{id}/page={page}")]
+    public ActionResult<IEnumerable<Post>> GetPagedPostsForUser(int id, int page)
+    {
+        var posts = _postService.GetPagedPostForUserProfile(id, page);
+        if (posts == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(posts);
+    }
+
     [HttpGet("maxpage")]
     public ActionResult<int> GetMaxPage()
     {

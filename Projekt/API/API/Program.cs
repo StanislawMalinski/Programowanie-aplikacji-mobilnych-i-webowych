@@ -40,19 +40,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Configure DbContext
-String connectionString;
-if (config["Mode"] == "Development")
-{
-    connectionString = "Data Source=db/SeededForumDatabase.db;";
-    Console.WriteLine("Developemnt Mode");
-}
-else
-{
-    connectionString = "Data Source=db/ForumDatabase.db;";
-    Console.WriteLine("Production Mode");
-}
-builder.Services.AddDbContext<AppDbContext>(options
-=> options.UseSqlite(connectionString));
+String connectionString = config.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
 
 
 // Configure Repositories

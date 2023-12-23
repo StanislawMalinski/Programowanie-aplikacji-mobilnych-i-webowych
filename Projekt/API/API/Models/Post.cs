@@ -8,7 +8,7 @@ public class Post
         Id = dto.Id;
         Title = dto.Title;
         Content = dto.Content;
-        CreatedAt = dto.CreatedAt;
+        CreatedAt = DateTime.ParseExact(dto.CreatedAt, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
         }
     public int Id { get; set; }
     public string Title { get; set; }
