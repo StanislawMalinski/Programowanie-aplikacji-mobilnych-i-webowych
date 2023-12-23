@@ -1,0 +1,70 @@
+@page "/forface/post/{id:int}"
+@inject IClientPost clientPost;
+@inject IClientComment clientComment;
+@inject UserContext user;
+@using Services;
+@using Models;
+
+if( post != null)
+{
+    <h2>Post</h2>
+    <h4>Created at: @post.CreatedAt</h4>
+    <h4>User: @post.User.UserName</h4>
+    <h3>@post.Title</h3>
+
+    <p>@post.Content</p>
+
+    @if (post.Comments.Count > 0)
+    {
+        <h4>Comments</h4>
+        @foreach (var comment in post.Comments)
+        {
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@comment.User.UserName</h5>
+                    <p class="card-text">@comment.Text</p>
+                </div>
+            </div>
+        }
+    }
+
+    <EditForm Model="newComment" OnValidSubmit="@HandleValidSubmit">
+            <div class="form-group">
+                <label for="Text">Comment</label>
+                <InputText class="form-control" id="Text" @bind-Value="newComment.Text" />
+            </div>
+            <button type="submit" class="btn btn-danger">Publish</button>
+    </EditForm>
+
+}
+else
+{
+    <p>Post not found</p>
+}
+
+@code{
+    [Parameter]
+    public int id { get; set; }
+    public Post post;
+    public Comment newComment = new Comment();
+
+    protected async override void OnInitialized()
+    {
+        post = await clientPost.GetPost(id.ToString());
+    }
+
+    protected async Task HandleValidSubmit()
+    {
+        newComment.PostId = post.Id;
+        newComment.User = user.GetUserProfile();
+        if(newComment.Id == 0)
+        {
+            await clientComment.PostComment(newComment);
+        } 
+        else
+        {
+            await clientComment.PutComment(newComment);
+        }
+    
+    }
+}

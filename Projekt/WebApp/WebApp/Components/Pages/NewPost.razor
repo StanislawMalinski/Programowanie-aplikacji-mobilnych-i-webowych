@@ -1,0 +1,38 @@
+@page "/forface/new";
+@using Models;
+@inject NavigationManager NavigationManager
+@inject IClientPost postClient;
+@inject UserContext user;
+
+<h3>New Post</h3>
+
+<EditForm Model="post" OnValidSubmit="HandleValidSubmit" FormName="post-form">
+    <DataAnnotationsValidator />
+
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <InputText class="form-control" type="text" id="postTitle" name="postTitle" @bind-Value="post.Title"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="director">My post:</label> <br>
+        <InputText class="form-control" type="text" id="postContent" name="postContent" @bind-Value="post.Content"></InputText>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</EditForm>
+
+
+@code {
+    private Post post = new Post();
+    
+    private async void HandleValidSubmit()
+    {
+        post.CreatedAt = DateTime.Now;
+        post.User = user.GetUserProfile();
+        post.Comments = new List<Comment>();
+        
+        await postClient.PostPost(post);
+        NavigationManager.NavigateTo("/main/forface");
+    }
+}
+

@@ -1,0 +1,90 @@
+﻿@page "/forface/main"
+@using Newtonsoft.Json;
+@using Microsoft.Extensions.Configuration;
+@using System.Collections.Generic;
+@using WebApp.Components.Services;
+@using WebApp.Components;
+@using WebApp.Models;
+@inject NavigationManager NavigationManager
+@inject IClientPost postClient;
+@inject IClientUserProfile userClient;
+@inject IClientComment commentClient;
+@inject UserContext user;
+
+<PageTitle>ForFace</PageTitle>
+
+<h1>Hello on ForFace</h1>
+
+
+@if (posts == null)
+{
+    <p><em>Loading...</em></p>
+    // TODO add animation.
+}
+else
+{
+    @foreach (var post in posts)
+    {
+        <div class="post">
+            <div class="post-author">
+                <h3 class="author-nick">@post.User.UserName</h3>
+            </div>
+            <div class="post-content">
+                <h3 class="post-title">@post.Title</h3>
+                <p class="created-date">@post.CreatedAt</p>
+                <p class="post-body">@post.Content</p>
+            </div>
+            <div class="post-buttons">
+                @if(post.User.Id == user.Id)
+                {
+                    <button class="post-button" @onclick="() => DeletePost(post.Id)">Delete</button>
+                    <button class="post-button" @onclick="() => EditPost(post.Id)">Edit</button>
+                } 
+                <button class="post-button" @onclick="() => GoToComments(post.Id)">Comments</button>   
+            </div>
+        </div>
+    }
+}
+
+@if(maxPage > 2)
+{
+    <div class="pagination">
+        <button class="page-button" disabled="@(page == 1)" @Click="() => {page--; Reload();}">Previous</button>
+        <button class="page-button" disabled="@(page == maxPage)" @Click="() => {page++; Reload();}">Next</button>
+    </div>
+}
+
+<p>Current Page: @(page)</p>
+
+@code {
+    private List<Post>? posts;
+    private int page = 1;
+    private int maxPage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Reload();
+    }
+
+    protected async Task Reload()
+    {
+        posts = null;
+        posts = await postClient.GetPosts(page);
+        maxPage = await postClient.GetMaxPage();
+    }
+
+    protected async Task DeletePost(int id)
+    {
+        NavigationManager.NavigateTo("/forface/delete/" + id.ToString());
+    }
+
+    protected async Task EditPost(int id)
+    {
+        NavigationManager.NavigateTo("/forface/edit/" + id.ToString());
+    }
+
+    protected async Task GoToComments(int id)
+    {
+        NavigationManager.NavigateTo("/forface/post/" + id.ToString());
+    }
+}

@@ -1,0 +1,49 @@
+@page "/forface/delete/{id:int}"
+@using Models;
+@inject NavigationManager NavigationManager
+@inject IClientPost postClient;
+@inject UserContext user;
+
+@if(validUser)
+{
+    <h3>Are you sure? There is no going back...</h3>
+
+    <EditForm Model="post" OnValidSubmit="@HandleValidSubmit">
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <button class="btn btn-secondary" @onclick="() => backToMenu()">Cancel</button>
+    </EditForm>
+} else {
+    <h3>You are not allowed to delete this post</h3>
+}
+
+
+@code
+{
+    [Parameter]
+    public int id { get; set; }
+
+    private Post post;
+    private bool validUser = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        post = await postClient.GetPost(id.ToString());
+        validUser = user.Id != post.User.Id;
+        if (!validUser)
+        {
+            await Task.Delay(5000);
+            NavigationManager.NavigateTo("/forface/main");
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        await postClient.DeletePost(id.ToString());
+        NavigationManager.NavigateTo("/forface/main");
+    }
+
+    private void backToMenu()
+    {
+        NavigationManager.NavigateTo("/forface/main");
+    }
+}
