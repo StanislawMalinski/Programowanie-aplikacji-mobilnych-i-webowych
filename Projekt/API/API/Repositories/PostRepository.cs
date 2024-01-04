@@ -53,7 +53,9 @@ public class PostRepository : IPostRepository
                 join u in _dbContext.Users on p.UserId equals u.Id
                 join c in _dbContext.Comments on p.Id equals c.PostId into comments
                 orderby p.CreatedAt descending
-                select mapDtoToPost(p, new UserProfile(u), comments.Select(c => new Comment(c)).ToList()))
+                select mapDtoToPost(p, 
+                            new UserProfile(u), 
+                            comments.Select(c => new Comment(c)).ToList()))
                 .ToList();
     }
 
@@ -108,6 +110,12 @@ public class PostRepository : IPostRepository
     private static PostDto mapPostToDto(Post post)
     {
         return PostMapper.mapPostToDto(post);
+    }
+
+    public int GetMaxPageForUser(int id, int pageSize)
+    {
+        var count = _dbContext.Posts.Where(p => p.UserId == id).Count();
+        return (int)Math.Ceiling((double)count / pageSize);
     }
     // Implement other methods as needed
 }

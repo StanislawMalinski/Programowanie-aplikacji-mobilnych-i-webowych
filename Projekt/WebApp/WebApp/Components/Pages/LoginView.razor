@@ -1,0 +1,49 @@
+@page "/forface/login";
+
+@inject IClientAuth clientAuth;
+@inject NavigationManager NavigationManager;
+@inject ILanguageService lang;
+@inject UserContext user;
+
+<EditForm Model="loginModel" OnValidSubmit="Login" FormName="login-form">
+    <DataAnnotationsValidator />
+
+        <div class="form-group">
+            <label for="email">@lang.GetPhrase("email")</label>
+            <InputText id="email" class="form-control" type="text" @bind-Value="loginModel.Email"> </InputText>
+        </div>
+        <div class="form-group">
+            <label for="password">@lang.GetPhrase("password")</label><br />
+            <InputText id="password" class="form-control" type="text" @bind-Value="loginModel.Password"></InputText>
+        </div>
+
+        <button type="submit" class="btn btn-primary">@lang.GetPhrase("login")</button>
+</EditForm>
+
+@if (message != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @message
+    </div> 
+}
+
+@code {
+    private LoginRequest loginModel;
+    private string message;
+    protected override void OnInitialized()
+    {
+        loginModel = new LoginRequest();
+    }
+
+    protected async Task Login()
+    {
+        Console.WriteLine(loginModel.ToString());
+        LoginResponse result = await clientAuth.Login(loginModel);
+        if (result.Message != null) {
+            message = result.Message;
+            return;
+        }
+        user.jwt = result?.Jwt;
+        user.UserProfile = result?.user;
+    }
+}

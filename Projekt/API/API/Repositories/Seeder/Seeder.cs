@@ -1,4 +1,5 @@
 ﻿using System.Reflection.Emit;
+using Models;
 
 namespace API.Repositories.Seeder.Seeder
 {
@@ -7,6 +8,7 @@ namespace API.Repositories.Seeder.Seeder
         private IUserProfileRepository _userProfileRepository;
         private IPostRepository _postRepository;
         private ICommentRepository _commentRepository;
+        private IJwtRepository _jwtRepository;
 
         private int numberOfUsers = 10;
         private int minNumberOfPostsPerUser = 5;
@@ -18,11 +20,12 @@ namespace API.Repositories.Seeder.Seeder
         private Generator _generator;
         private Random _rand;
 
-        public Seeder(ICommentRepository commentRepository, IPostRepository postRepository, IUserProfileRepository userProfileRepository)
+        public Seeder(ICommentRepository commentRepository, IPostRepository postRepository, IUserProfileRepository userProfileRepository, IJwtRepository jwtRepository)
         {
             _commentRepository = commentRepository;
             _postRepository = postRepository;
             _userProfileRepository = userProfileRepository;
+            _jwtRepository = jwtRepository;
             _generator = new Generator(seed);
             _rand = new Random(seed);
     }
@@ -44,7 +47,9 @@ namespace API.Repositories.Seeder.Seeder
             List<UserProfile> users = _generator.getNewUsers(numberOfUsers);
             foreach (UserProfile user in users)
             {
+                JwtDto jwt = _generator.getJwt(user);
                 _userProfileRepository.CreateUserProfile(user);
+                _jwtRepository.AddJwt(jwt);
             }
         }
 

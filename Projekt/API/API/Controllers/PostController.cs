@@ -66,16 +66,18 @@ public class PostController : ControllerBase
         return Ok(posts);
     }
 
+    [HttpGet("{id}/maxpage")]
+    public ActionResult<int> GetMaxPageForUser(int id)
+    {
+        var maxPage = _postService.GetMaxPageForUser(id);
+        return maxPage == 0 ? Ok(1) : Ok(maxPage);
+    }
+
     [HttpGet("maxpage")]
     public ActionResult<int> GetMaxPage()
     {
         var maxPage = _postService.GetMaxPage();
-        if (maxPage == 0)
-        {
-            return NotFound();
-        }
-
-        return Ok(maxPage);
+        return maxPage == 0 ? Ok(1) : Ok(maxPage);
     }
 
     [HttpPost]

@@ -1,22 +1,27 @@
 @page "/forface/post/{id:int}"
-@inject IClientPost clientPost;
-@inject IClientComment clientComment;
-@inject UserContext user;
 @using Services;
 @using Models;
+@inject IClientPost clientPost;
+@inject IClientComment clientComment;
+@inject NavigationManager NavigationManager
+@inject UserContext user;
+@inject ILanguageService lang;
 
-if( post != null)
+
+<PageTitle>@lang.GetPhrase("post")</PageTitle>
+
+@if( post != null)
 {
-    <h2>Post</h2>
-    <h4>Created at: @post.CreatedAt</h4>
-    <h4>User: @post.User.UserName</h4>
+    <h2>@lang.GetPhrase("post")</h2>
+    <h4>@lang.GetPhrase("createdAt"): @post.CreatedAt</h4>
+    <h4>@lang.GetPhrase("user"): @post.User.UserName</h4>
     <h3>@post.Title</h3>
 
     <p>@post.Content</p>
 
     @if (post.Comments.Count > 0)
     {
-        <h4>Comments</h4>
+        <h4>@lang.GetPhrase("comments")</h4>
         @foreach (var comment in post.Comments)
         {
             <div class="card">
@@ -28,18 +33,18 @@ if( post != null)
         }
     }
 
-    <EditForm Model="newComment" OnValidSubmit="@HandleValidSubmit">
+    <EditForm Model="newComment" OnValidSubmit="@HandleValidSubmit" FormName="comment-form">
             <div class="form-group">
-                <label for="Text">Comment</label>
-                <InputText class="form-control" id="Text" @bind-Value="newComment.Text" />
+                <label for="Text">@lang.GetPhrase("comment")</label>
+                <InputText class="form-control" id="Text" @bind="newComment.Text" />
             </div>
-            <button type="submit" class="btn btn-danger">Publish</button>
+            <button type="submit" class="btn btn-danger">@lang.GetPhrase("publish")</button>
     </EditForm>
 
 }
 else
 {
-    <p>Post not found</p>
+    <p>@lang.GetPhrase("noPost")</p>
 }
 
 @code{
@@ -51,6 +56,11 @@ else
     protected async override void OnInitialized()
     {
         post = await clientPost.GetPost(id.ToString());
+        if(post == null)
+        {
+            await Task.Delay(1000);
+            NavigationManager.NavigateTo("/forface/main");
+        }
     }
 
     protected async Task HandleValidSubmit()

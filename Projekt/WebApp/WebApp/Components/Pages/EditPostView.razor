@@ -1,0 +1,37 @@
+@page "/forface/edit/{id:int}"
+@inject IClientPost postClient;
+@inject ILanguageService lang;
+
+<h3>New Post</h3>
+
+<EditForm Model="post" OnValidSubmit="HandleValidSubmit" FormName="post-form">
+    <DataAnnotationsValidator />
+
+    <div class="form-group">
+        <label for="title">@lang.GetPhrase("title"): </label> <br>
+        <InputText class="form-control" type="text" id="postTitle" name="postTitle" @bind-Value="post.Title"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="director">@lang.GetPhrase("psotContent")": </label> <br>
+        <InputText class="form-control" type="text" id="postContent" name="postContent" @bind-Value="post.Content"></InputText>
+    </div>
+
+    <button type="submit" class="btn btn-primary">@lang.GetPhrase("save")</button>
+</EditForm>
+
+
+@code{
+    private Post post;
+    [Parameter]
+    public int id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        post = await postClient.GetPost(id.ToString());
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        await postClient.PutPost(post);
+    }
+}

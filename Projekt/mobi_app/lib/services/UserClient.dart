@@ -4,13 +4,10 @@ import 'dart:io';
 import 'package:mobi_app/models/UserProfile.dart';
 
 class UserClient {
-  final Map<String, dynamic> config;
-
-  UserClient(this.config);
-
+  static Map<String, dynamic> config = {};
 
   //Get
-  Future<UserProfile> GetUser(int id) async {
+  static Future<UserProfile> GetUser(int id) async {
     var url = config["UserProfile"]["Get"].replaceAll("{id}", id.toString()).toString();
     var uri = getUri(url);
     var client = HttpClient();
@@ -25,8 +22,7 @@ class UserClient {
     }
   }
 
-
-  Future<void> DeleteUser(int id) async {
+  static Future<void> DeleteUser(int id) async {
     var url = config["UserProfile"]["Delete"].replaceAll("{id}", id.toString()).toString();
     var uri = getUri(url);
     var client = HttpClient();
@@ -43,8 +39,8 @@ class UserClient {
   }
 
 
-  //   "Post": "UserProfile",
-  Future<void> PostUser(UserProfile user) async {
+  // Post
+  static Future<void> PostUser(UserProfile user) async {
     var url = config["UserProfile"]["Post"].toString();
     var uri = getUri(url);
     var client = HttpClient();
@@ -62,8 +58,8 @@ class UserClient {
     }
   }
 
-  //       "Put": "UserProfile"
-  Future<void> PutUser(UserProfile user) async {
+  // Put
+  static Future<void> PutUser(UserProfile user) async {
     var url = config["UserProfile"]["Put"].toString();
     var uri = getUri(url);
     var client = HttpClient();
@@ -81,7 +77,7 @@ class UserClient {
     }
   }
 
-  Uri getUri(String url){
+  static Uri getUri(String url){
     return Uri(path: config["Path"] + "/" + url,
         scheme: config["Protocol"],
         host: config["Host"],

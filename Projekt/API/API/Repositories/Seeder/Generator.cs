@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using Models;
 
 namespace API.Repositories.Seeder.Seeder
 {
@@ -119,6 +120,15 @@ namespace API.Repositories.Seeder.Seeder
                 comments.Add(GetComment(post, user));
             }
             return comments;
+        }
+
+        public JwtDto getJwt(UserProfile user)
+        {
+            JwtDto jwt = new JwtDto();
+            jwt.UserId = user.Id;
+            jwt.Token = "qwe123";
+            jwt.Permissions = new string[] { "user" };
+            return jwt;
         }
     }
 }

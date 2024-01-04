@@ -1,22 +1,44 @@
+using Models;
+
 namespace WebApp.Models
 {
-    public class UserContext : UserProfile
+    public class UserContext 
     {
+        public bool IsAuthenticated { get; set; }
+        public UserProfile UserProfile { get; set; }
+        public Jwt jwt { get; set; }
+
         public UserContext()
         {
-            Id = 1;
-            UserName = "Stach  Maliński";
-            Email = "StachoJacho@gmail.com";
-            Bio = "Stanley Stach Malinski, 21 lat, student informatyki na Politechnice Warszawskiej.";
+            IsAuthenticated = false;
         }
 
         public UserProfile GetUserProfile(){
-            return new UserProfile(){
-                Id = Id,
-                UserName = UserName,
-                Email = Email,
-                Bio = Bio  
-            };
+            if (UserProfile == null) {
+                return new UserProfile();
+            }
+            return UserProfile;
+        }
+
+        public Boolean isAdmin(){
+            if (jwt == null) {
+                return false;
+            }
+            return jwt.Permissions.Contains("admin");
+        }
+
+        public Boolean isUser(){
+            if (jwt == null) {
+                return false;
+            }
+            return jwt.Permissions.Contains("user");
+        }
+
+        public Boolean isId(int id){
+            if (UserProfile == null) {
+                return false;
+            }
+            return UserProfile.Id == id;
         }
     }
 }

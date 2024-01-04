@@ -1,4 +1,4 @@
-﻿@page "/forface/main"
+﻿@page "/forface/main/{page:int?}"
 @using Newtonsoft.Json;
 @using Microsoft.Extensions.Configuration;
 @using System.Collections.Generic;
@@ -10,37 +10,48 @@
 @inject IClientUserProfile userClient;
 @inject IClientComment commentClient;
 @inject UserContext user;
+@inject ILanguageService lang;
 
-<PageTitle>ForFace</PageTitle>
+<PageTitle>@lang.GetPhrase("forFace")</PageTitle>
 
-<h1>Hello on ForFace</h1>
+<h1>@lang.GetPhrase("helloOnForface")</h1>
 
 
 @if (posts == null)
 {
-    <p><em>Loading...</em></p>
-    // TODO add animation.
+    <img src="Bean Eater-1s-200px.svg" alt="@lang.GetPhrase("loadingAnimation")">
 }
 else
 {
     @foreach (var post in posts)
     {
         <div class="post">
-            <div class="post-author">
-                <h3 class="author-nick">@post.User.UserName</h3>
-            </div>
+            <a href="/forface/@post.User.Id">
+                <div class="post-author">
+                    <h3 class="author-nick">@post.User.UserName</h3>
+                </div>
+            </a>
             <div class="post-content">
                 <h3 class="post-title">@post.Title</h3>
                 <p class="created-date">@post.CreatedAt</p>
                 <p class="post-body">@post.Content</p>
             </div>
             <div class="post-buttons">
-                @if(post.User.Id == user.Id)
-                {
-                    <button class="post-button" @onclick="() => DeletePost(post.Id)">Delete</button>
-                    <button class="post-button" @onclick="() => EditPost(post.Id)">Edit</button>
-                } 
-                <button class="post-button" @onclick="() => GoToComments(post.Id)">Comments</button>   
+                <div class="post-button">
+                    <a href="/forface/delete/@post.Id">
+                        <button class="post-button">@lang.GetPhrase("delete")</button>
+                    </a>
+                </div>
+                <div class="post-button">
+                    <a href="/forface/edit/@post.Id">
+                        <button class="post-button">@lang.GetPhrase("edit")</button>
+                    </a>
+                </div>     
+                <div class="post-button">
+                    <a href="/forface/post/@post.Id"> 
+                        <button class="post-button">@lang.GetPhrase("comments")</button>
+                    </a>
+                </div>
             </div>
         </div>
     }
@@ -49,8 +60,17 @@ else
 @if(maxPage > 2)
 {
     <div class="pagination">
-        <button class="page-button" disabled="@(page == 1)" @Click="() => {page--; Reload();}">Previous</button>
-        <button class="page-button" disabled="@(page == maxPage)" @Click="() => {page++; Reload();}">Next</button>
+        <div class="pagination-button">
+            <a href="/forface/main/@(page - 1)">
+                <button class="page-button" disabled="@(page == 1)">@lang.GetPhrase("previous")</button>
+            </a>
+        </div>
+
+        <div class="pagination-button">
+            <a href="/forface/main/@(page + 1)">
+                <button class="page-button" disabled="@(page == maxPage)" >@lang.GetPhrase("next")</button>
+            </a>
+        </div>
     </div>
 }
 
@@ -58,7 +78,8 @@ else
 
 @code {
     private List<Post>? posts;
-    private int page = 1;
+    [Parameter]
+    public int page { get; set; }
     private int maxPage;
 
     protected override async Task OnInitializedAsync()
@@ -68,23 +89,11 @@ else
 
     protected async Task Reload()
     {
+        page = page == 0 ? 1 : page;
         posts = null;
+        StateHasChanged();
+        await Task.Delay(2000);
         posts = await postClient.GetPosts(page);
         maxPage = await postClient.GetMaxPage();
-    }
-
-    protected async Task DeletePost(int id)
-    {
-        NavigationManager.NavigateTo("/forface/delete/" + id.ToString());
-    }
-
-    protected async Task EditPost(int id)
-    {
-        NavigationManager.NavigateTo("/forface/edit/" + id.ToString());
-    }
-
-    protected async Task GoToComments(int id)
-    {
-        NavigationManager.NavigateTo("/forface/post/" + id.ToString());
     }
 }

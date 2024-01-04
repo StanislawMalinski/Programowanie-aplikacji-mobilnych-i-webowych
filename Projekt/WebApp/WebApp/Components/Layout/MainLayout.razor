@@ -1,4 +1,6 @@
 ﻿@inherits LayoutComponentBase
+@inject ILanguageService lang;
+@inject UserContext user;
 
 <div class="page">
     <div class="sidebar">
@@ -8,6 +10,24 @@
     <main>
         <div class="top-row px-4">
             <a href="https://github.com/StanislawMalinski/Programowanie-aplikacji-mobilnych-i-webowych" target="_blank">Gtihub</a>
+            @if (user.IsAuthenticated)
+            {
+                <a href="forface/logout">@lang.GetPhrase("logout")</a>
+            }
+            else
+            {
+                <a href="forface/register">@lang.GetPhrase("register")</a>
+                <a href="forface/login">@lang.GetPhrase("login")</a>
+            }
+            <div class="lang">
+                <div class="flag">
+                    <img src="pl-flag.png" alt="pl" @onclick="SetPolish" width="20" height="20">
+                </div>
+        
+                <div class="flag">
+                    <img src="en-flag.png" alt="en" @onclick="SetEnglish" width="20" height="20">
+                </div>
+            </div>
         </div>
 
         <article class="content px-4">
@@ -21,3 +41,18 @@
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
+
+
+@code {
+
+    protected void SetPolish()
+    {
+        lang.SetLanguage("pl");
+    }
+
+    protected void SetEnglish()
+    {
+        lang.SetLanguage("en");
+    }
+
+}

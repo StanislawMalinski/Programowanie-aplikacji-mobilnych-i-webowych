@@ -48,6 +48,30 @@ namespace API.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("Models.JwtDto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string[]>("Permissions")
+                        .IsRequired()
+                        .HasColumnType("text[]");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Jwt");
+                });
+
             modelBuilder.Entity("PostDto", b =>
                 {
                     b.Property<int>("Id")

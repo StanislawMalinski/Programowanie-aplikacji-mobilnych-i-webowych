@@ -9,6 +9,5 @@ public interface IPostRepository
     void DeletePost(int postId);
     void allDeletePost();
     int GetMaxPage(int pageSize);
-
-    // Add other methods as needed
+    int GetMaxPageForUser(int id, int pageSize);
 }

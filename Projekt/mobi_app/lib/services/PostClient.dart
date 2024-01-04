@@ -4,16 +4,13 @@ import 'dart:io';
 import '../models/Post.dart';
 
 class PostClient {
-    final Map<String, dynamic> config;
-
-    PostClient(this.config);
-
+    static Map<String, dynamic> config = {};
 
     // GetMain
-
-    Future<List<Post>> GetMain(int page) async {
+    static Future<List<Post>> getMain(int page) async {
       var url = config["Post"]["GetMain"].replaceAll("{page}", page.toString()).toString();
       var uri = getUri(url);
+      print(uri);
       var client = HttpClient();
       try
       {
@@ -28,7 +25,7 @@ class PostClient {
     }
 
     // GetMainMaxPage
-    Future<int> GetMainMaxPage() async {
+    static Future<int> getMainMaxPage() async {
       var url = config["Post"]["GetMainMaxPage"].toString();
       var uri = getUri(url);
       var client = HttpClient();
@@ -44,7 +41,7 @@ class PostClient {
     }
 
     // Get
-    Future<Post> Get(int id) async {
+    static Future<Post> get(int id) async {
       var url = config["Post"]["Get"].replaceAll("{id}", id.toString()).toString();
       var uri = getUri(url);
       var client = HttpClient();
@@ -60,7 +57,7 @@ class PostClient {
     }
 
     // GetPostForUser
-    Future<List<Post>> GetPostForUser(int userId, int page) async {
+    static Future<List<Post>> getPostForUser(int userId, int page) async {
       var url = config["Post"]["GetPostForUser"]
           .replaceAll("{id}", userId.toString())
           .replaceAll("{page}", page.toString())
@@ -80,7 +77,7 @@ class PostClient {
     }
 
     // GetMaxPostForUser
-    Future<int> GetMaxPostForUser(int userId) async {
+    static Future<int> getMaxPostForUser(int userId) async {
       var url = config["Post"]["GetMaxPostForUser"]
           .replaceAll("{id}", userId.toString())
           .toString();
@@ -98,7 +95,7 @@ class PostClient {
     }
 
     // Delete
-    Future<void> DeletePost(int id) async {
+    static Future<void> deletePost(int id) async {
       var url = config["Post"]["Delete"].replaceAll("{id}", id.toString()).toString();
       var uri = getUri(url);
       var client = HttpClient();
@@ -112,7 +109,7 @@ class PostClient {
     }
 
     // Post
-    Future<void> PostPost(Post post) async {
+    static Future<void> postPost(Post post) async {
       var url = config["Post"]["Post"].toString();
       var uri = getUri(url);
       var client = HttpClient();
@@ -128,7 +125,7 @@ class PostClient {
     }
 
     // Put
-    Future<void> PutPost(Post post) async {
+    static Future<void> putPost(Post post) async {
       var url = config["Post"]["Put"].toString();
       var uri = getUri(url);
       var client = HttpClient();
@@ -143,7 +140,7 @@ class PostClient {
       }
     }
 
-    Uri getUri(String url){
+    static Uri getUri(String url){
       return Uri(path: config["Path"] + "/" + url,
           scheme: config["Protocol"],
           host: config["Host"],
@@ -153,12 +150,14 @@ class PostClient {
 
 
 
-void main(){
-  var filePath = "lib/resources/appsettings.json";
+void main() async{
+  var filePath = "resources/config.json";
   var content = File(filePath).readAsStringSync();
   var map = jsonDecode(content);
-  PostClient c = PostClient(map["URL"]);
-  c.GetMain(1);
+
+  PostClient.config = map["URL"];
+
+  await PostClient.getMain(1).then((value) => print(value));
 }
 
 

@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Models;
+
 
 namespace API.Models
 {
@@ -9,6 +11,6 @@ namespace API.Models
         public DbSet<UserProfileDto> Users { get; set; }
         public DbSet<PostDto> Posts { get; set; }
         public DbSet<CommentDto> Comments { get; set; }
-
+        public DbSet<JwtDto> Jwt { get; set; }
     }
 }

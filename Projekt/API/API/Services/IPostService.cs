@@ -9,6 +9,7 @@ public interface IPostService
     Post UpdatePost(Post post);
     void DeletePost(int postId);
     int GetMaxPage();
+    int GetMaxPageForUser(int id);
 
     // Add other methods as needed
 }

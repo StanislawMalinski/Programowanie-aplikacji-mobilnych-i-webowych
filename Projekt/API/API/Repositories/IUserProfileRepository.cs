@@ -6,5 +6,5 @@ public interface IUserProfileRepository
     List<UserProfile> GetAllUserProfile();
     void DeleteUserProfile(int userId);
     void allDeleteUserProfile();
-    // Add other methods as needed
+    UserProfile getUser(string email);
 }

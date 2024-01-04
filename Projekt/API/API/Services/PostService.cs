@@ -42,5 +42,8 @@ public class PostService : IPostService
         return _postRepository.GetMaxPage(_pageSize);
     }
 
-    // Add other methods as needed
+    public int GetMaxPageForUser(int id)
+    {
+        return _postRepository.GetMaxPageForUser(id, _pageSize);
+    }
 }

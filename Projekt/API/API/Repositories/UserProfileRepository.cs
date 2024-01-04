@@ -61,6 +61,14 @@ public class UserProfileRepository : IUserProfileRepository
         }
     }
 
+    public UserProfile getUser(string email)
+    {
+        return (from u in _dbContext.Users
+                where u.Email == email
+                select mapDtoToUser(u))
+                .FirstOrDefault() ?? new UserProfile();
+    }
+
     public static UserProfile mapDtoToUser(UserProfileDto dto){
         return UserProfileMapper.mapDtoToUser(dto);
     }
@@ -68,4 +76,6 @@ public class UserProfileRepository : IUserProfileRepository
     public static UserProfileDto mapUserToDto(UserProfile user){
         return UserProfileMapper.mapUserToDto(user);
     }
+
+
 }

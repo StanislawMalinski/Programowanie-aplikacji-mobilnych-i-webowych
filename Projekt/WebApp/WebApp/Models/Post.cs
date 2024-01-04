@@ -6,7 +6,6 @@ public class Post
     public string Title { get; set; }
     public string Content { get; set; }
     public DateTime CreatedAt { get; set; }
-    public UserProfile User { get; set; } // Foreign key for UserProfile
+    public UserProfile User { get; set; } 
     public List<Comment> Comments { get; set; }
-    // Add other properties as needed
 }

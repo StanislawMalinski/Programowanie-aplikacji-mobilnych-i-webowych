@@ -8,6 +8,7 @@
     {
         public class ClientUserProfile : IClientUserProfile
         {
+
             private readonly HttpClient _httpClient;
             private readonly IConfiguration _configuration;
 
@@ -15,8 +16,6 @@
             {
                 _httpClient = httpClient;
                 _configuration = configuration;
-
-                // Set the base URL from appsettings
                 _httpClient.BaseAddress = new Uri(_configuration["URL:BaseURL"]);
             }
 
@@ -27,6 +26,7 @@
                 var response = await _httpClient.PostAsync(url, content);
                 response.EnsureSuccessStatusCode();
                 var result = await response.Content.ReadAsStringAsync();
+
                 return JsonConvert.DeserializeObject<UserProfile>(result);
             }
 
@@ -36,6 +36,7 @@
                 var response = await _httpClient.GetAsync(url);
                 response.EnsureSuccessStatusCode();
                 var result = await response.Content.ReadAsStringAsync();
+
                 return JsonConvert.DeserializeObject<UserProfile>(result);
             }
 
@@ -46,6 +47,7 @@
                 var response = await _httpClient.PutAsync(url, content);
                 response.EnsureSuccessStatusCode();
                 var result = await response.Content.ReadAsStringAsync();
+
                 return JsonConvert.DeserializeObject<UserProfile>(result);
             }
 
@@ -55,6 +57,7 @@
                 var response = await _httpClient.DeleteAsync(url);
                 response.EnsureSuccessStatusCode();
                 var result = await response.Content.ReadAsStringAsync();
+
                 return JsonConvert.DeserializeObject<Boolean>(result);
             }
         }

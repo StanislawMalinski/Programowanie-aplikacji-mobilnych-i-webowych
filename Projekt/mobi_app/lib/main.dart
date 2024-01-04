@@ -1,42 +1,36 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'package:mobi_app/layouts/UserProfileBodyLayout.dart';
+import 'package:mobi_app/layouts/PostEditorLayout.dart';
+import 'package:mobi_app/models/UserProfile.dart';
+
+import 'package:mobi_app/services/Configuration.dart';
+import 'package:mobi_app/services/CurrentUser.dart';
+
+import 'layouts/MainPageBodyLayout.dart';
+import 'layouts/PostViewBodyLayout.dart';
+import 'layouts/components/BottomNavigationBarComponent.dart';
+import 'models/Post.dart';
+
+void main(){
+  Configuration.load();
+  CurrentUser.setUserProfile(UserProfile(1, "Stacho", "email.com", "Stan jest super mega i ma super laskę"));
+  runApp(MaterialApp(home: MyApp(),
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(primaryColor: Colors.lightBlue),));
 }
 
-class MyApp extends StatelessWidget {
+
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('ForFace'),
-        ),
-
-        body: const Center(
-          child: Text('Welcome to ForFace'),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.face),
-              label: 'MyProfile',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.add),
-              label: 'New Post',
-            )
-          ]
-        ),
-      ),
-    );
+    return MainPageBodyLayout();
   }
 }

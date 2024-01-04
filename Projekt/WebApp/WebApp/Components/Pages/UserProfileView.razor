@@ -1,0 +1,107 @@
+@page "/forface/{id:int?}/{page:int?}"
+@page "/forface/me/{page:int?}"
+
+@using Models;
+@using Services;
+
+@inject NavigationManager NavigationManager
+@inject UserContext userContext;
+@inject IClientPost postClient;
+@inject IClientUserProfile UserClient;
+
+@inject ILanguageService lang;
+
+@if (userContext.isId(id))
+{
+    <h3>@lang.GetPhrase("myProfile")</h3>
+} 
+else 
+{
+    <h3>@lang.GetPhrase("userProfile")</h3>
+}
+
+
+@if (user != null)
+{
+    <div class="row">
+        <h4>@user.UserName</h4>
+        <p>@user.Bio</p>
+    </div>
+    @if (posts != null)
+    {
+        <h4>@lang.GetPhrase("posts")</h4>
+        foreach (var post in posts)
+        {
+            <div class="post">
+                <div class="post-content">
+                    <h3 class="post-title">@post.Title</h3>
+                    <p class="created-date">@post.CreatedAt</p>
+                    <p class="post-body">@post.Content</p>
+                </div>
+                <div class="post-buttons">
+                    @if(userContext.isId(post.User.Id))
+                    {
+                        <div class="post-button">
+                        <a href="/forface/delete/@post.Id">
+                            <button class="post-button">@lang.GetPhrase("delete")</button>
+                        </a>
+                        </div>
+                        <div class="post-button">
+                        <a href="/forface/edit/@post.Id">
+                            <button class="post-button">@lang.GetPhrase("edit")</button>
+                        </a>
+                        </div>
+                    }
+                    <div class="post-button">
+                        <a href="/forface/post/@post.Id"> 
+                            <button class="post-button">@lang.GetPhrase("comments")</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    } 
+    else
+    {
+        <p>@lang.GetPhrase("noPost")</p>
+    }
+    @if(maxPage > 2)
+    {
+        <div class="pagination">
+            <div class="pagination-button">
+                <a href="/forface/main/@(page - 1)">
+                    <button class="page-button" disabled="@(page == 1)">@lang.GetPhrase("previous")</button>
+                </a>
+            </div>
+
+            <div class="pagination-button">
+                <a href="/forface/main/@(page + 1)">
+                    <button class="page-button" disabled="@(page == maxPage)" >@lang.GetPhrase("next")</button>
+                </a>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <img src="Bean Eater-1s-200px.svg" alt="@lang.GetPhrase("loadingAnimation")">
+}
+
+@code {
+    private List<Post> posts;
+    private int maxPage = 1;
+    [Parameter]
+    public int id { get; set; }
+
+    [Parameter]
+    public int page { get; set;}
+    private UserProfile user;
+    protected override async Task OnInitializedAsync()
+    {
+        page = page == 0 ? page = 1 : page;
+        id = id == 0 ? userContext.UserProfile.Id : id;
+        maxPage = await postClient.GetMaxPageForUserProfiles(id.ToString());
+        user = await UserClient.GetUserProfile(id.ToString());
+        posts = await postClient.GetPostsForUserProfiles(id.ToString(), page);
+    }
+}

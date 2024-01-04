@@ -14,3 +14,25 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.post-button {
+    margin: auto;
+    padding: 5px;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #255e9b;
+    background-color: #9fb4ca;
+}
+
+.post-button :hover {
+    background-color: #255e9b;
+}
+
+.post-buttons {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-content: right;
+}
+

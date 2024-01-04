@@ -3,17 +3,15 @@ import 'dart:io';
 
 import 'package:mobi_app/models/Comment.dart';
 
-class UserClient {
-  final Map<String, dynamic> config;
-
-  UserClient(this.config);
+class CommentClient {
+  static Map<String, dynamic> config = {};
 
 //    "Comment": {
 //       "Get": "Comment/{id}",
 
 
   //GetComment
-  Future<Comment> GetComment(int id) async {
+  static Future<Comment> GetComment(int id) async {
     var url = config["Comment"]["Get"].replaceAll("{id}", id.toString()).toString();
     var uri = getUri(url);
     var client = HttpClient();
@@ -29,7 +27,7 @@ class UserClient {
   }
 
 //       "GetCommentForPost": "Post/{id}/Comment",
-  Future<List<Comment>> GetCommentsForPost(int id) async {
+  static Future<List<Comment>> GetCommentsForPost(int id) async {
     var url = config["Comment"]["GetCommentForPost"].replaceAll("{id}", id.toString()).toString();
     var uri = getUri(url);
     var client = HttpClient();
@@ -46,7 +44,7 @@ class UserClient {
   }
 
 //       "Delete": "Comment/{id}",
-  Future<void> DeleteComment(int id) async {
+  static Future<void> DeleteComment(int id) async {
     var url = config["Comment"]["Delete"].replaceAll("{id}", id.toString()).toString();
     var uri = getUri(url);
     var client = HttpClient();
@@ -63,7 +61,7 @@ class UserClient {
   }
 
 //       "Post": "Comment",
-  Future<void> PostComment(Comment comment) async {
+  static Future<void> PostComment(Comment comment) async {
     var url = config["Comment"]["Post"].toString();
     var uri = getUri(url);
     var client = HttpClient();
@@ -82,7 +80,7 @@ class UserClient {
   }
 
 //       "Put": "Comment"
-  Future<void> PutComment(Comment comment) async {
+  static Future<void> PutComment(Comment comment) async {
     var url = config["Comment"]["Put"].toString();
     var uri = getUri(url);
     var client = HttpClient();
@@ -100,7 +98,7 @@ class UserClient {
     }
   }
 
-  Uri getUri(String url){
+  static Uri getUri(String url){
     return Uri(path: config["Path"] + "/" + url,
         scheme: config["Protocol"],
         host: config["Host"],

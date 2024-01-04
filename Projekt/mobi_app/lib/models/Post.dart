@@ -18,4 +18,9 @@ class Post {
   factory Post.fromJson(Map<String, dynamic> json) => _$PostFromJson(json);
 
   Map<String, dynamic> toJson() => _$PostToJson(this);
+
+  @override
+  String toString() {
+    return "Post{id: $id, title: $title, content: $content, createdAt: $createdAt, user: $user, comments: $comments}";
+  }
 }

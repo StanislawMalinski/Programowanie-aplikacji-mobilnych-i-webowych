@@ -1,0 +1,55 @@
+@page "/forface/delete/{id:int}"
+
+@inject NavigationManager NavigationManager
+@inject IClientPost postClient;
+@inject UserContext user;
+@inject ILanguageService lang;
+
+@if(validUser)
+{
+    <h3>@lang.GetPhrase("deletionPostConfirmationMessage")</h3>
+
+    <EditForm Model="post" OnValidSubmit="@HandleValidSubmit" FormName="confirmation-form">
+        <h2>@lang.GetPhrase("post")</h2>
+        <h4>@lang.GetPhrase("createdAt"): @post.CreatedAt</h4>
+        <h4>@lang.GetPhrase("user"): @post.User.UserName</h4>
+        <h3>@post.Title</h3>
+
+        <p>@post.Content</p>
+
+        <button type="submit" class="btn btn-danger">@lang.GetPhrase("delete")</button>
+    </EditForm>
+} else {
+    <h3>@lang.GetPhrase("AccessDeniedMessage")</h3>
+}
+
+
+@code
+{
+    [Parameter]
+    public int id { get; set; }  
+
+    private Post post;
+    private bool validUser = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        post = await postClient.GetPost(id.ToString());
+        if (post == null)
+        {
+            NavigationManager.NavigateTo("/forface/main");
+        }
+        validUser = user.isId(post.User.Id);
+        if (validUser)
+        {
+            await Task.Delay(5000);
+            NavigationManager.NavigateTo("/forface/main");
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        await postClient.DeletePost(id.ToString());
+        NavigationManager.NavigateTo("/forface/main");
+    }
+}
