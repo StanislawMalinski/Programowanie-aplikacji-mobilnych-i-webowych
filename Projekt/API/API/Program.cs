@@ -58,6 +58,13 @@ builder.Services.AddScoped<IJwtService, JwtService>();
 
 builder.Services.AddScoped<ISeederService, SeederService>();
 
+var myPolicy = "MyCorsePolicy";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(myPolicy, builder =>
+    builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -68,6 +75,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(myPolicy);
 
 app.UseAuthentication();
 app.UseAuthorization();
