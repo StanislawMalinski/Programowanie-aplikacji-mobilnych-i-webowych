@@ -1,0 +1,36 @@
+.post-list-container {
+
+
+}
+
+.post-list {
+    overflow-y: scroll;
+    height: 700px;
+}
+
+.post-container {
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid #bfbfbf;
+    border-radius: 3px;
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.post-author-name {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.post-date {
+    color: #bfbfbf;
+}
+
+.post-content {
+    padding: 10px;
+}
