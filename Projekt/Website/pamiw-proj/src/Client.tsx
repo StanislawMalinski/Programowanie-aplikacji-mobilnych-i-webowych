@@ -6,12 +6,12 @@ async function curl(url: string, method: string, data: any) {
     try {
         const response = await fetch(url, {
             method: method,
-            body: data ? JSON.stringify(data) : null,
             headers: {
-                'Accept': 'text/plain',
+                'Accept': '*/*',
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             },
+            body: data ? JSON.stringify(data) : null,
         });
         return await response.json();  
     } catch (error) {
@@ -44,11 +44,11 @@ export function DeletePost(id: number) {
     return curl(baseUrl + 'Post/' + id, 'DELETE', null);
 }
 
-export function PostPost(postJson: string) {
+export function PostPost(postJson: any) {
     return curl(baseUrl + 'Post', 'POST', postJson);
 }
 
-export function PutPost(postJson: string) {
+export function PutPost(postJson: any) {
     return curl(baseUrl + 'Post', 'PUT', postJson);
 }
 
@@ -60,18 +60,18 @@ export function DeleteUser(id: number) {
     return curl(baseUrl + 'UserProfile/' + id, 'DELETE', null);
 }
 
-export function PostUser(userJson: string) {
+export function PostUser(userJson: any) {
     return curl(baseUrl + 'UserProfile', 'POST', userJson);
 }
 
-export function PutUser(userJson: string) {
+export function PutUser(userJson: any) {
     return curl(baseUrl + 'UserProfile', 'PUT', userJson);
 }
 
-export function Login(loginJson: string) {
+export function Login(loginJson: any) {
     return curl(baseUrl + 'Jwt/login', 'POST', loginJson);
 }
 
-export function Register(registerJson: string) {
+export function Register(registerJson: any) {
     return curl(baseUrl + 'Jwt/register', 'POST', registerJson);
 }

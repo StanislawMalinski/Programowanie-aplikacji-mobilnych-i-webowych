@@ -1,15 +1,28 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import SideMenu from "./components/SideMenu";
 import UpperMenu from "./components/UpperMenu";
 import MainContent from "./components/MainContent";
 import PopUpWindow from "./components/PopUpWindow";
 import './App.css'
 
+import { getUser, setUser, usr } from "./User";
+
 function App () {
+  setUser(usr);
   const [mainContentState, setMainContentState] = useState("main-page");
   const [authPopUpState, setAuthPopUpState] = useState("hidden");
-  const [authorized, setAuthorized] = useState(false);
+  const [authorized, setAuthorized] = useState(getUser() !== null);
   const [selectedUser, setSelectedUser] = useState(1);
+
+  useEffect(() => {
+    if (authorized) {
+      setMainContentState("my-profile");
+    } else {
+      setMainContentState("main-page");
+    }
+  }, [authorized, getUser()]);
+
+  console.log(getUser());
 
     return <>
     <div className="left split">
@@ -35,7 +48,9 @@ function App () {
           setSelectedUser={setSelectedUser}/>
     </div>
     
-    <PopUpWindow state={authPopUpState}  setState={setAuthPopUpState} />
+    <PopUpWindow state={authPopUpState}  
+      setState={setAuthPopUpState} 
+      setAuthorisationStatus={setAuthorized}/>
   </>
 }
 

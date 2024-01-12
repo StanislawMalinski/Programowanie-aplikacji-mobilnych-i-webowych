@@ -16,5 +16,29 @@
     padding: 1rem;
     border-radius: 0.5rem;
     width: 50%;
-    height: 50%;
+    height: fit-content;
+}
+
+.auth-btn {
+    background-color: #00ffff;
+    width: 300px;
+    margin: 5px;
+
+    border: none;
+    border-radius: 5px;
+    height: 38px;
+
+    transition: all 0.5s ease;
+}
+
+.auth-btn:hover {
+    background-color: #00a6a6;
+    color: #00ffff;
+}
+
+.auth-btns {
+    display:grid;
+    justify-content: space-around;
+    margin: 20px;
+    padding: auto;
 }
