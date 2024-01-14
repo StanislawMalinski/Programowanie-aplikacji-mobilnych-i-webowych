@@ -1,6 +1,7 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import { getPhrase } from './LanguageSelector';
 
 import RegisterForm from './forms/RegisterForm';
 import LoginForm from './forms/LoginForm';
@@ -20,14 +21,14 @@ interface PopUpWindowProps {
 function PopUpWindow(props: PopUpWindowProps) {
 
     const LoginContent = (<>
-            <h1>Login you fat fuck</h1>
+            <h1>{getPhrase("login")}</h1>
             <div className='auth-btns'>
                 <LoginForm selfClose={() => props.setState("hidden")} setAuthorised={props.setAuthorisationStatus} />
                 <button className='auth-btn'>
-                    Login with Google
+                {getPhrase("login-with-google")}
                 </button>
                 <button className='auth-btn' onClick={() => props.setState("hidden")}>
-                    Cancle
+                {getPhrase("cancel")}
                 </button>
             </div>
         </>
@@ -36,14 +37,14 @@ function PopUpWindow(props: PopUpWindowProps) {
 
     const RegisterContent = (
         <>
-            <h1>Register you fuckin asshole</h1>
+            <h1>{getPhrase("register")}</h1>
             <div className='auth-btns'>
                 <RegisterForm selfClose={() => props.setState("hidden")} setAuthorised={props.setAuthorisationStatus}/>
                 <button className='auth-btn'>
-                    Register with Google
+                {getPhrase("register-with-google")}
                 </button>
                 <button className='auth-btn' onClick={() => props.setState("hidden")}>
-                    Cancle
+                {getPhrase("cancel")}
                 </button>
             </div>
         </>
@@ -51,11 +52,11 @@ function PopUpWindow(props: PopUpWindowProps) {
     
     const LogoutContent = (
         <>
-            <h1>Logout you stupid piece of shit</h1>
+            <h1>{getPhrase("logout")}</h1>
             <div className='auth-btns'>
                 <LogoutForm selfClose={() => props.setState("hidden")} setAuthorised={props.setAuthorisationStatus}/>
                 <button className='auth-btn' onClick={() => props.setState("hidden")}>
-                    Cancle
+                {getPhrase("cancel")}
                 </button>
             </div>
         </>
@@ -76,7 +77,7 @@ function PopUpWindow(props: PopUpWindowProps) {
             content = RegisterContent;
             break;
         default:
-            content = <h1>Twoja stara to kopara.</h1>
+            content = <h1>{getPhrase("error-massage")}</h1>
     }
     
     return props.state != "hidden" && (
@@ -86,7 +87,7 @@ function PopUpWindow(props: PopUpWindowProps) {
                     <IoMdCloseCircleOutline />
                 </div>
                 <h1>
-                    Here is your fuckin popup
+                {getPhrase("hi")}
                 </h1>
                 <p> {content} </p>
             </div>

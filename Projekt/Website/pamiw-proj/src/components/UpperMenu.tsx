@@ -1,5 +1,7 @@
 import './UpperMenu.css'
 import { VscAccount } from "react-icons/vsc";
+import { getPhrase } from "./LanguageSelector";
+import LanguageSelector from './LanguageSelector';
 
 interface UpperMenuProps {
     state: boolean
@@ -16,21 +18,24 @@ function UpperMenu(props: UpperMenuProps) {
     const getButtons = (arg: boolean) => {
         return arg ? 
             ( <><button className="upper-menu-btn"
-                        onClick={props.onLogout}>Logout</button>
+                        onClick={props.onLogout}>{getPhrase("logout")}</button>
                     <div className="upper-menu-btn account-icon" onClick={props.onAccount}>
                         <VscAccount />
                     </div>
                 </>) 
             :
             (<><button className="upper-menu-btn"
-                       onClick={props.onLogin}>Login</button>
+                       onClick={props.onLogin}>{getPhrase("login")}</button>
             <button className="upper-menu-btn"
-                        onClick={props.onRegister}>Register</button></>);
+                        onClick={props.onRegister}>{getPhrase("register")}</button></>);
     }
 
     return (
         <>
             <div className = "upper-menu-container">
+                <div className='language-selector-container'>
+                    <LanguageSelector />
+                </div>
                 {getButtons(props.authorisationStatus)}
                 <button onClick={() => props.setAuthorisationStatus(!props.authorisationStatus)}> (tmp change)</button>
             </div>

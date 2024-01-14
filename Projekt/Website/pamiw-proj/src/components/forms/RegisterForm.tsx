@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Register } from "../../Client";
 import { setUser } from "../../User";
+import { getPhrase } from "../LanguageSelector";
 import './Form.css'
 
 interface RegisterFormProps {
@@ -18,7 +19,7 @@ function RegisterForm(props: RegisterFormProps) {
         
 
         if (payload.password !== payload.repeatpassword) {
-            alert("Passwords do not match");
+            alert(getPhrase("invalid-password-massage"));
             return;
         }
         delete payload.repeatpassword;
@@ -47,13 +48,13 @@ function RegisterForm(props: RegisterFormProps) {
     return (
         <>
             <div className="form-container">
-                <div className="message loud">{message}</div>
+                <div className="message loud">{getPhrase(message)}</div>
                 <form onSubmit={submitForm} className="form">
-                    <input className='form-input' type='email' name='email' placeholder='Your Mail'></input>
-                    <input className='form-input' type='text' name='userName' placeholder='Your UserName'></input>
-                    <input className='form-input' type="password" name='password' placeholder='Password'></input>
-                    <input className='form-input' type="password" name='repeatpassword' placeholder='Password 2'></input>
-                    <button className="auth-btn" type='submit'>Register</button>
+                    <input className='form-input' type='email' name='email' placeholder={getPhrase("your-mail")}></input>
+                    <input className='form-input' type='text' name='userName' placeholder={getPhrase("your-username")}></input>
+                    <input className='form-input' type="password" name='password' placeholder={getPhrase("password")}></input>
+                    <input className='form-input' type="password" name='repeatpassword' placeholder={getPhrase("repeate-password")}></input>
+                    <button className="auth-btn" type='submit'>{getPhrase("register")}</button>
                 </form>
             </div>
         </>

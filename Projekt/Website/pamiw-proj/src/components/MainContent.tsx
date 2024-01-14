@@ -1,9 +1,12 @@
 import { Fragment, useEffect, useState } from "react";
-import PostList from "./PostList";
+import PostList from "./main_pages/PostList";
 import Paginator from "./Paginator";
 import './MainContent.css'
+import { getPhrase } from "./LanguageSelector";
 
-import { GetPosts, GetMaxPosts, GetPostsForUser, GetMaxPostsForUser } from '../Client';
+import MainPage from "./main_pages/MainPage";
+import ProfilePage from "./main_pages/ProfilePage";
+import NewPostPage from "./main_pages/NewPostPage";
 
 interface MainContentProps {
     navigateToProfile(): void;
@@ -14,13 +17,42 @@ interface MainContentProps {
 }
 
 function MainContent(props: MainContentProps) {
-    const [page, setPage] = useState(1);
-    const [posts, setPosts] = useState([]);
-    const [maxPages, setMaxPages] = useState(1);
-    const id = 1;
-
     var content
+    console.log(props.state);
     switch (props.state) {
+        case "main-page":
+            content = <MainPage />;
+            break;
+        case "my-profile":
+            content = ProfilePage();
+            break;
+        case "new-post":
+            content =  <NewPostPage />
+            break;
+        case "profile":
+            content = <h1>{getPhrase("profile")}</h1>;
+            break;
+        default:
+            content = <h1>{getPhrase("error-message")}</h1>;
+            break;
+    }
+
+    return (
+        <>
+            <div className="main-content-frame">
+                <h1>Main Content</h1>
+                <div className="main-content">
+                    {content}
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default MainContent;
+
+/*
+switch (props.state) {
         case "main-page":
             useEffect(() => {
                 GetPosts(page)
@@ -53,7 +85,7 @@ function MainContent(props: MainContentProps) {
             break;
         case "my-profile":
             useEffect(() => {
-                GetPostsForUser(id, page)
+                GetPostsForUser(1, page)
                 .then((res) => 
                     setPosts(res)
                 ).catch((err) =>
@@ -62,7 +94,7 @@ function MainContent(props: MainContentProps) {
             }, [page]);
 
             useEffect(() => {
-                GetMaxPostsForUser(id)
+                GetMaxPostsForUser(props.selectedUser)
                 .then((res) => 
                     setMaxPages(res)
                 ).catch((err) =>
@@ -81,31 +113,14 @@ function MainContent(props: MainContentProps) {
 
             break;
         case "new-post":
-            content = <h1>New Post</h1>;
+            content = <h1>{getPhrase("new-post")}</h1>;
             break;
         case "profile":
-            content = <h1>Profile</h1>;
+            content = <h1>{getPhrase("profile")}</h1>;
             break;
         default:
-            content = <h1>Something went wrong</h1>;
+            content = <h1>{getPhrase("error-message")}</h1>;
             break;
     }
 
-    return (
-        <>
-            <div className="main-content-frame">
-                <h1>Main Content</h1>
-                <div className="paginator">
-                    <Paginator  maxPages={maxPages} 
-                                currentPage={page} 
-                                setCurrentPage={setPage} />
-                </div>  
-                <div className="main-content">
-                    {content}
-                </div>
-            </div>
-        </>
-    );
-}
-
-export default MainContent;
+*/

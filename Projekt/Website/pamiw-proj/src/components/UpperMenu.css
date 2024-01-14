@@ -11,7 +11,7 @@
 
 .upper-menu-btn {
     background-color: #00ffff;
-    width: 100px;
+    width: max-content;
     margin-right: 20px;
 
     border: none;
@@ -24,6 +24,13 @@
 .upper-menu-btn:hover {
     background-color: #00a6a6;
     color: #00ffff;
+}
+
+.language-selector-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+
 }
 
 .account-icon {

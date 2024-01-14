@@ -6,9 +6,10 @@ import PopUpWindow from "./components/PopUpWindow";
 import './App.css'
 
 import { getUser, setUser, usr } from "./User";
+import { Route } from "react-router-dom";
 
 function App () {
-  setUser(usr);
+  setUser(usr); // Develop only
   const [mainContentState, setMainContentState] = useState("main-page");
   const [authPopUpState, setAuthPopUpState] = useState("hidden");
   const [authorized, setAuthorized] = useState(getUser() !== null);
@@ -20,37 +21,35 @@ function App () {
     } else {
       setMainContentState("main-page");
     }
-  }, [authorized, getUser()]);
-
-  console.log(getUser());
+  }, [authorized]);
 
     return <>
-    <div className="left split">
-      <SideMenu changeState={setMainContentState} loggedIn={authorized}/>
-    </div>
-    <div className="right split">
-      <UpperMenu state={true} onLogin={function (): void {
-          setAuthPopUpState("logging-in");
-        } } onLogout={function (): void {
-          setAuthPopUpState("logging-out");
-        } } onRegister={function (): void {
-          setAuthPopUpState("registering");
-        } } onAccount={function (): void {
-          console.log("account");
-          setMainContentState("my-profile");
-        } } authorisationStatus={authorized} 
-          setAuthorisationStatus={
-            setAuthorized
-        }/>
-      <MainContent state={mainContentState} 
-          navigateToProfile={() => {setMainContentState("profile")}}
-          selectedUser={selectedUser}
-          setSelectedUser={setSelectedUser}/>
-    </div>
-    
-    <PopUpWindow state={authPopUpState}  
-      setState={setAuthPopUpState} 
-      setAuthorisationStatus={setAuthorized}/>
+      <div className="left split">
+        <SideMenu changeState={setMainContentState} loggedIn={authorized}/>
+      </div>
+      <div className="right split">
+        <UpperMenu state={true} onLogin={function (): void {
+            setAuthPopUpState("logging-in");
+          } } onLogout={function (): void {
+            setAuthPopUpState("logging-out");
+          } } onRegister={function (): void {
+            setAuthPopUpState("registering");
+          } } onAccount={function (): void {
+            console.log("account");
+            setMainContentState("my-profile");
+          } } authorisationStatus={authorized} 
+            setAuthorisationStatus={
+              setAuthorized
+          }/>
+        <MainContent state={mainContentState} 
+            navigateToProfile={() => {setMainContentState("profile")}}
+            selectedUser={selectedUser}
+            setSelectedUser={setSelectedUser}/>
+      </div>
+      
+      <PopUpWindow state={authPopUpState}  
+        setState={setAuthPopUpState} 
+        setAuthorisationStatus={setAuthorized}/>
   </>
 }
 

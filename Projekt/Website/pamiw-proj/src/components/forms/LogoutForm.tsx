@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { removeUser } from "../../User";
+import { getPhrase } from "../LanguageSelector";
 import './Form.css'
 
 interface LogoutFormProps {
@@ -20,10 +21,10 @@ function LogoutForm(props: LogoutFormProps) {
     return (
         <>
             <div className="form-container">
-                <div className="message loud">{message}</div>
+                <div className="message loud">{getPhrase(message)}</div>
                 <form onSubmit={submitForm} className="form">
-                    <div className="message">Are you sure you want to log out?</div>
-                    <button className="auth-btn" type='submit'>Logout</button>
+                    <div className="message">{getPhrase("logout-message")}</div>
+                    <button className="auth-btn" type='submit'>{getPhrase("logout")}</button>
                 </form>
             </div>
         </>

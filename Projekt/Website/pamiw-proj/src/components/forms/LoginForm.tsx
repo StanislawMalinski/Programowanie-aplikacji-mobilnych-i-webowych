@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import './Form.css';
 import { setUser } from '../../User';
 import { Login } from '../../Client';
+import { getPhrase } from '../LanguageSelector';
 
-import { GoogleLogin } from '@react-oauth/google';
+//import { GoogleLogin } from '@react-oauth/google';
 
 
 
@@ -44,12 +45,22 @@ function LoginForm (props: LoginFormProps) {
     return (
         <>
             <div className="form-container">
-                <div className="message loud">{message}</div>
+                <div className="message loud">{getPhrase(message)}</div>
                 <form onSubmit={submitForm} className="form">
-                    <input className='form-input' type='email' name='email' placeholder='Your Mail'></input>
-                    <input className='form-input' type="password" name='password' placeholder='Password'></input>
-                    <button className="auth-btn" type='submit'>Login</button>
+                    <input className='form-input' type='email' name='email' placeholder={getPhrase("your-mail")}></input>
+                    <input className='form-input' type="password" name='password' placeholder={getPhrase("password")}></input>
+                    <button className="auth-btn" type='submit'>{getPhrase("login")}</button>
                 </form>
+            </div>
+        </>
+    );
+
+}
+
+export default LoginForm;
+
+/*
+
                 <GoogleLogin
                     onSuccess={credentialResponse => {
                         console.log(credentialResponse);
@@ -58,10 +69,5 @@ function LoginForm (props: LoginFormProps) {
                         console.log('Login Failed');
                     }}
 />;
-            </div>
-        </>
-    );
 
-}
-
-export default LoginForm;
+*/
