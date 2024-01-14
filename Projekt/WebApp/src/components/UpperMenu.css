@@ -1,0 +1,52 @@
+.upper-menu-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background-color: #acd0e7;
+    border-bottom: 4px solid #e6e6e6;
+    padding: 20px;
+}
+
+.upper-menu-btn {
+    background-color: #00ffff;
+    width: max-content;
+    margin-right: 20px;
+
+    border: none;
+    border-radius: 5px;
+    height: 38px;
+
+    transition: all 0.5s ease;
+}
+
+.upper-menu-btn:hover {
+    background-color: #00a6a6;
+    color: #00ffff;
+}
+
+.language-selector-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+
+}
+
+.account-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e6e6e6;
+    background-size: cover;
+}
+
+svg {
+    width: 40px;
+    height: 40px;
+    fill: black;
+}
+
+svg:hover {
+    cursor: pointer;
+}
