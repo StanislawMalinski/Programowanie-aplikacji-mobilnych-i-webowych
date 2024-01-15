@@ -1,15 +1,13 @@
-FROM node:17-alpine as builder
-WORKDIR /app
-COPY package*.json .
-COPY yarn*.lock .
-RUN yarn install
-COPY . .
-RUN yarn build
-
-#Stage 2
-FROM nginx:1.19.0
-EXPOSE 5137
-WORKDIR /usr/share/nginx/html
-RUN rm -rf ./*
-COPY --from=builder /app/build .
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+FROM node:18-alpine
+EXPOSE 5137:5137
+WORKDIR /app/
+COPY package.json /app/
+COPY src /app/src
+COPY tsconfig.json /app/
+COPY index.html /app/
+COPY package-lock.json /app/
+COPY tsconfig.node.json /app/
+COPY vite.config.ts /app/
+COPY public /app/public
+RUN npm install
+CMD ["npm", "run", "host"]
