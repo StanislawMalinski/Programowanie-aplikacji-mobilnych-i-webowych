@@ -80,7 +80,7 @@ function PopUpWindow(props: PopUpWindowProps) {
             content = <h1>{getPhrase("error-massage")}</h1>
     }
     
-    return props.state != "hidden" && (
+    return props.state != "hidden" ? (
         <div className='popup'>
             <div className='popup-inner'>
                 <div className='close-button-container' onClick={() => props.setState("hidden")}>
@@ -92,7 +92,7 @@ function PopUpWindow(props: PopUpWindowProps) {
                 <p> {content} </p>
             </div>
         </div> 
-    )
+    ) : <></>;
 }
 
 

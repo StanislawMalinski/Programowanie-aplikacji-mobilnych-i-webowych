@@ -26,7 +26,7 @@ function RegisterForm(props: RegisterFormProps) {
         
         Register(payload)
         .then((res) => {
-            console.log(res);
+            // console.log(res);
             if (res.message === null){
                 var user = {
                     id: res.id,

@@ -1,0 +1,30 @@
+version: '3'
+services:
+  database:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: forumdb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+
+  backend:
+    image: mcr.microsoft.com/dotnet/core/sdk:3.1
+    working_dir: /app
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./API/API:/app
+    ports:
+      - "7061:7061"
+    
+
+  frontend:
+    image: node:14-alpine
+    working_dir: /app
+    volumes:
+      - ./Webapp:/app
+    ports:
+      - "8000:8000"
+    command: npm run dev

@@ -1,6 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
-import PostList from "./main_pages/PostList";
-import Paginator from "./Paginator";
+
 import './MainContent.css'
 import { getPhrase } from "./LanguageSelector";
 
@@ -18,7 +16,8 @@ interface MainContentProps {
 
 function MainContent(props: MainContentProps) {
     var content
-    console.log(props.state);
+    // console.log(props.state);
+    
     switch (props.state) {
         case "main-page":
             content = <MainPage />;
@@ -40,7 +39,6 @@ function MainContent(props: MainContentProps) {
     return (
         <>
             <div className="main-content-frame">
-                <h1>Main Content</h1>
                 <div className="main-content">
                     {content}
                 </div>
@@ -61,7 +59,7 @@ switch (props.state) {
                 ).catch((err) =>
                     console.error(err)
                 );
-                console.log(page);
+                // console.log(page);
             }, [page]);
 
             useEffect(() => {

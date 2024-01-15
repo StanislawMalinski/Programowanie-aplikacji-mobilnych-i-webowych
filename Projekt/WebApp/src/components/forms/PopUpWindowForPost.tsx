@@ -46,7 +46,7 @@ function PopUpWindowForPost(props: PopUpWindowForPostProps) {
     )
 
     var content;
-    console.log(props.state);
+    // console.log(props.state);
     switch (props.state) {
         case "hidden":
             content = <div></div>;

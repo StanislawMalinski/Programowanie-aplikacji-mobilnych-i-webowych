@@ -28,6 +28,9 @@ class _MainPageBodyLayoutState extends BodyLayoutState<Post> {
   }
 
   Future<List<Post>> loadPosts(int page) async {
+    var list = await PostClient.getMain(page);
+    list.add(Post(1, "title1", "body", DateTime.now(), UserProfile(1, "name", "email", "bio"), []));
+    // return list;
     return [Post(1, "title1", "body", DateTime.now(), UserProfile(1, "name", "email", "bio"), []),
       Post(2, "title2", "body", DateTime.now(), UserProfile(2, "name", "email", "bio"), []),
       Post(3, "title3", "body", DateTime.now(), UserProfile(3, "name", "email", "bio"), []),

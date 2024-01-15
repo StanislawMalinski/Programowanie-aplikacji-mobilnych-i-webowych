@@ -18,9 +18,9 @@ function NewPostPage() {
         newPostRequest.createdAt = new Date().toISOString();
         newPostRequest.comments = [];
         
-        console.log(newPostRequest);
+        // console.log(newPostRequest);
         PostPost(newPostRequest).then((res) => {
-            console.log(res);
+            // console.log(res);
         }).catch((err) => {
             console.error(err);
         });

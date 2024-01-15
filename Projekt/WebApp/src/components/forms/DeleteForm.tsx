@@ -19,7 +19,7 @@ function DelteForm (props: EditFormProps) {
     useEffect(() => {
         GetPost(props.postId)
         .then((res) => {
-            console.log(res);
+            // console.log(res);
         })
     }, []);
 

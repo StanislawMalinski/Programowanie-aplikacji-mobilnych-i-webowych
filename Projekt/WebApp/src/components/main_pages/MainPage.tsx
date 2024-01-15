@@ -13,24 +13,20 @@ function MainPage () {
         GetPosts(page).then((res) => {
             setPosts(res);
         }).catch((err) => {
-            console.error(err);
             return (<></>);
         });
 
         GetMaxPosts().then((res) => { 
             setMaxPages(res);
         }).catch((err) => {
-            console.error(err);
             return (<></>);
         });
-        console.log(page);
     }, [page]);
 
     return (
         <div className="profile">
-            <p>Dzień dobry</p>
-            <PostList posts={posts} navigateToUser={() => 1}/>
             <Paginator maxPages={maxPages} currentPage={page} setCurrentPage={setPage}/>
+            <PostList posts={posts} navigateToUser={() => 1}/>
         </div>
     )
 }

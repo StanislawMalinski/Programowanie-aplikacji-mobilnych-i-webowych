@@ -13,7 +13,7 @@ function PostList(props: PostListProps) {
             <div className="post-author" 
                  onClick={() => {
                     props.navigateToUser(post.user.id);
-                    console.log(post.user.userName);
+                    // console.log(post.user.userName);
                     }}>
 
                 <div className="post-author-icon">

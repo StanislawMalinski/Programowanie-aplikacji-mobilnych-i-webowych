@@ -37,7 +37,7 @@ function UpperMenu(props: UpperMenuProps) {
                     <LanguageSelector />
                 </div>
                 {getButtons(props.authorisationStatus)}
-                <button onClick={() => props.setAuthorisationStatus(!props.authorisationStatus)}> (tmp change)</button>
+                
             </div>
         </>
     );

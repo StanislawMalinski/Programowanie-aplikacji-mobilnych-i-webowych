@@ -9,20 +9,15 @@ import { getUser, setUser, usr } from "./User";
 import { Route } from "react-router-dom";
 
 function App () {
-  setUser(usr); // Develop only
+  //setUser(usr); // Develop only
   const [mainContentState, setMainContentState] = useState("main-page");
   const [authPopUpState, setAuthPopUpState] = useState("hidden");
   const [authorized, setAuthorized] = useState(getUser() !== null);
   const [selectedUser, setSelectedUser] = useState(1);
 
   useEffect(() => {
-    if (authorized) {
-      setMainContentState("my-profile");
-    } else {
-      setMainContentState("main-page");
-    }
-  }, [authorized]);
-
+  setMainContentState("main-page");
+  }, []);
     return <>
       <div className="left split">
         <SideMenu changeState={setMainContentState} loggedIn={authorized}/>
@@ -35,7 +30,6 @@ function App () {
           } } onRegister={function (): void {
             setAuthPopUpState("registering");
           } } onAccount={function (): void {
-            console.log("account");
             setMainContentState("my-profile");
           } } authorisationStatus={authorized} 
             setAuthorisationStatus={

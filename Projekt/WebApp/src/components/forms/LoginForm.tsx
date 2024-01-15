@@ -23,10 +23,11 @@ function LoginForm (props: LoginFormProps) {
 
         Login(payload)
         .then((res) => {
-            console.log(res);
+            // console.log(res);
             if (res.message === null){
                 var user = {
                     id: res.id,
+                    
                     userName: res.user.userName,
                     email: res.user.email,
                     permissions: res.permissions
@@ -63,10 +64,10 @@ export default LoginForm;
 
                 <GoogleLogin
                     onSuccess={credentialResponse => {
-                        console.log(credentialResponse);
+                        // console.log(credentialResponse);
                     }}
                     onError={() => {
-                        console.log('Login Failed');
+                        // console.log('Login Failed');
                     }}
 />;
 

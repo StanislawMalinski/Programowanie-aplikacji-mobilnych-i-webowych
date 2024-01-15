@@ -14,7 +14,7 @@ import 'models/Post.dart';
 
 void main(){
   Configuration.load();
-  CurrentUser.setUserProfile(UserProfile(1, "Stacho", "email.com", "Stan jest super mega i ma super laskę"));
+  CurrentUser.setUserProfile(UserProfile(1, "Stacho", "email.com", "Stan jest super mega i ma super samochód"));
   runApp(MaterialApp(home: MyApp(),
     debugShowCheckedModeBanner: false,
     theme: ThemeData(primaryColor: Colors.lightBlue),));

@@ -55,6 +55,8 @@ const dic = {
   "cancle": {"en": "Cancle", "pl": "Anuluj"},
   "title" : {"en": "Title", "pl": "Tytuł"},
   "content" : {"en": "Content", "pl": "Treść"},
+  "User already exists." : {"en": "User already exists.", "pl": "Użytkownik już istnieje."},
+  "logout-message": {"en": "Are you sure you want to logout?", "pl": "Czy na pewno chcesz się wylogować?"},
 }
 function LanguageSelector() {
   function setLanguage(lang: string) {
@@ -62,7 +64,7 @@ function LanguageSelector() {
     window.location.reload();
   }
 
-  console.log(getPhrase('test'));
+  // console.log(getPhrase('test'));
 
   return (
     <div className='flag-selector'>
@@ -175,6 +177,10 @@ function getPhrase(phrase: string) {
     res = dic[phrase];
   else if (phrase === "content")
     res = dic[phrase];
+  else if (phrase === "User already exists.")
+    res = dic["User already exists."];
+  else if (phrase === "logout-message")
+    res = dic["logout-message"];
 
   if (lang === 'en')
     return res.en;
