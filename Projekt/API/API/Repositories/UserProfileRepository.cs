@@ -21,10 +21,15 @@ public class UserProfileRepository : IUserProfileRepository
 
     public UserProfile CreateUserProfile(UserProfile userProfile)
     {
+        userProfile.Id = getNextId();
         UserProfileDto dto = mapUserToDto(userProfile);
         _dbContext.Users.Add(dto);
         _dbContext.SaveChanges();
         return userProfile;
+    }
+
+    private int getNextId(){
+        return _dbContext.Users.Max(u => u.Id) + 1;
     }
 
     public UserProfile UpdateUserProfile(UserProfile userProfile)

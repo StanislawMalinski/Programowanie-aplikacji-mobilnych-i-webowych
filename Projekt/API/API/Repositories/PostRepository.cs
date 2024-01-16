@@ -61,11 +61,16 @@ public class PostRepository : IPostRepository
 
     public Post CreatePost(Post post)
     {
-        post.Id = -1;
+        post.Id = getNextId();
         PostDto dto = mapPostToDto(post);
         _dbContext.Posts.Add(dto);
         _dbContext.SaveChanges();
         return post;
+    }
+
+    private int getNextId()
+    {
+        return _dbContext.Posts.Max(u => u.Id) + 1;
     }
 
     public Post UpdatePost(Post post)
