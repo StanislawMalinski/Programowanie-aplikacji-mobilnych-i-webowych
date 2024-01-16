@@ -5,7 +5,7 @@ using Models;
 namespace Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("forum/[controller]")]
 public class JwtController
 {
     private readonly IJwtService _jwtService;

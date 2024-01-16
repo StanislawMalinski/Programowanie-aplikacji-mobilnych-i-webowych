@@ -42,6 +42,7 @@ public class CommentRepository : ICommentRepository
 
     public Comment CreateComment(Comment comment)
     {
+        comment.Id = -1;
         CommentDto dto = mapCommentToDto(comment);
         _dbContext.Comments.Add(dto);
         _dbContext.SaveChanges();

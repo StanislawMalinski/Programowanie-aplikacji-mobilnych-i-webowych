@@ -61,6 +61,7 @@ public class PostRepository : IPostRepository
 
     public Post CreatePost(Post post)
     {
+        post.Id = -1;
         PostDto dto = mapPostToDto(post);
         _dbContext.Posts.Add(dto);
         _dbContext.SaveChanges();

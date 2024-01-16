@@ -14,8 +14,8 @@ services:
       context: ./API
       dockerfile: Dockerfile
     ports:
-      - "7061:7061"
-    
+      - "7061:7061"    
+
 
   frontend:
     build:
