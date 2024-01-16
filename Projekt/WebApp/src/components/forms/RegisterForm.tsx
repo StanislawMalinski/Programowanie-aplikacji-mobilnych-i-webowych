@@ -29,10 +29,11 @@ function RegisterForm(props: RegisterFormProps) {
             // console.log(res);
             if (res.message === null){
                 var user = {
-                    id: res.id,
+                    id: res.user.id,
+                    bio: res.user.bio, 
                     userName: res.user.userName,
                     email: res.user.email,
-                    permissions: res.permissions
+                    permissions: res.jwt.permissions
                 }
                 setUser(user);
                 props.setAuthorised(true);

@@ -1,5 +1,3 @@
-import React from 'react';
-import Popup from 'reactjs-popup';
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { getPhrase } from './../LanguageSelector';
 
