@@ -14,8 +14,6 @@ function PostList(props: PostListProps) {
     let user = localStorage.getItem("user") ? localStorage.getItem("user"): null;
     let id = user ? JSON.parse(user).id : null;
 
-    user ? console.log(JSON.parse(user)) : console.log("no user");
-
     var content = props.posts.map((post) =>
         <div key={post.id} className="post-container">
             <div className="post-author" 

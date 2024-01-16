@@ -33,15 +33,14 @@ function EditForm (props: EditFormProps) {
         const data = new FormData(e.target as HTMLFormElement);
         const payload = Object.fromEntries(data);
 
-        // console.log(payload);
-        // console.log(post);
+        console.log(post);
         var newPost = JSON.parse(JSON.stringify(post));
         newPost.title = title;
         newPost.content = content;
-
-        // console.log(newPost);
+        newPost.comments = [];
+        console.log(newPost);
         PutPost(newPost).then((res) => {
-            // console.log(res);
+            console.log(res);
         });
         props.selfClose();
         window.location.reload();

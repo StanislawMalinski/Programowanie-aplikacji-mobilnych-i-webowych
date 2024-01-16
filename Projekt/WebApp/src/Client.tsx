@@ -45,11 +45,11 @@ export function DeletePost(id: number) {
 }
 
 export function PostPost(postJson: any) {
-    return curl(baseUrl + 'Post', 'POST', postJson);
+    return curl(baseUrl + 'Post/', 'POST', postJson);
 }
 
 export function PutPost(postJson: any) {
-    return curl(baseUrl + 'Post', 'PUT', postJson);
+    return curl(baseUrl + 'Post/', 'PUT', postJson);
 }
 
 export function GetUser(id: number) {
