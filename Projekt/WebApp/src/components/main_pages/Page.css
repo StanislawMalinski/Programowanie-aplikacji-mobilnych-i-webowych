@@ -9,3 +9,7 @@
 textarea {
     min-height: 300px;
 }
+
+.bio-input {
+    width: 100%;
+}

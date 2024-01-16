@@ -23,7 +23,7 @@ function MainContent(props: MainContentProps) {
             content = <MainPage />;
             break;
         case "my-profile":
-            content = ProfilePage();
+            content = <ProfilePage />;
             break;
         case "new-post":
             content =  <NewPostPage />

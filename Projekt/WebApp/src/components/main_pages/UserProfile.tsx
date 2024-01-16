@@ -8,7 +8,7 @@ function UserProfile(props: UserProfileProps) {
         <>
             <div className="user-profile">
                 <h1>{props.user.userName}</h1>
-                <h2>{props.user.email}</h2>
+                <h2>{props.user.bio}</h2>
             </div>
         </>
     );
