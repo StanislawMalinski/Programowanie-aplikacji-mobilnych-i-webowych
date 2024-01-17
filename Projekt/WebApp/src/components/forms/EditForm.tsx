@@ -4,10 +4,6 @@ import { setUser } from '../../User';
 import { PutPost, GetPost } from '../../Client';
 import { getPhrase } from '../LanguageSelector';
 
-//import { GoogleLogin } from '@react-oauth/google';
-
-
-
 interface EditFormProps {
     selfClose: () => void
     postId: number
@@ -48,6 +44,7 @@ function EditForm (props: EditFormProps) {
 
     return (
         <div className="new-post">
+            
             <form onSubmit={submitEditPost} className="form main-content-form">
                 <input 
                         className="form-input" 
@@ -70,8 +67,10 @@ function EditForm (props: EditFormProps) {
                         value={content}
                         onChange={event => setContent(event.target.value)} 
                         />
+                
                 <input className="auth-btn" type="submit" value={getPhrase("publish")} />
             </form>
+
         </div>
     );
 

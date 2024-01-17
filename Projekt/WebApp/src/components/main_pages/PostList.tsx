@@ -2,6 +2,7 @@ import { VscAccount } from "react-icons/vsc";
 import PopUpWindowForPost from "../forms/PopUpWindowForPost";
 import './PostList.css';
 import { useState } from "react";
+import { getPhrase } from "../LanguageSelector";
 
 interface PostListProps {
     posts: any[]
@@ -44,8 +45,12 @@ function PostList(props: PostListProps) {
             
             {post.user.id == id ? (
                 <div className="post-item-button">
-                    <button className="btn btn-primary" onClick={() => {setPostId(post.id); setState('edit')}}>Edit</button>
-                    <button className="btn btn-danger" onClick={() => {setPostId(post.id); setState('delete')}}>Delete</button>
+                    <button className="btn btn-primary" onClick={() => {setPostId(post.id); setState('edit')}}>
+                        {getPhrase('edit')}
+                    </button>
+                    <button className="btn btn-danger" onClick={() => {setPostId(post.id); setState('delete')}}>
+                        {getPhrase('delete')}
+                    </button>
                 </div>)
                 :
                 (<></>)

@@ -16,6 +16,7 @@ function LogoutForm(props: LogoutFormProps) {
         removeUser();
         props.setAuthorised(false);
         props.selfClose();
+        window.location.reload();
     }
 
     return (

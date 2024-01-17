@@ -47,6 +47,7 @@ namespace API.Repositories.Seeder.Seeder
             List<UserProfile> users = _generator.getNewUsers(numberOfUsers);
             foreach (UserProfile user in users)
             {
+                Thread.Sleep(100);
                 JwtDto jwt = _generator.getJwt(user);
                 _userProfileRepository.CreateUserProfile(user);
                 _jwtRepository.AddJwt(jwt);
@@ -59,32 +60,20 @@ namespace API.Repositories.Seeder.Seeder
             List<Post> posts = new List<Post>();
             foreach (UserProfile user in users)
             {
+                Thread.Sleep(100);
                 posts.AddRange(
                     _generator.getPosts(user, _rand.Next(maxNumberOfPosts - minNumberOfPostsPerUser) + minNumberOfPostsPerUser));
             }
             foreach (Post post in posts)
             {
+                Thread.Sleep(100);
                 _postRepository.CreatePost(post);
             }
         }
 
         private void populateWithComments()
         {
-            List<UserProfile> users = _userProfileRepository.GetAllUserProfile();
-            List<Post> posts = _postRepository.GetAllPosts();
-            List<Comment> comments = new List<Comment>();
-            foreach (UserProfile user in users)
-            {
-                foreach (Post post in posts)
-                {
-                    comments.AddRange(
-                        _generator.getComments(post, user, _rand.Next(maxNumberOfCommentsPerPost - minNumberOfCommentsPerPost) + minNumberOfCommentsPerPost));
-                }
-            }
-            foreach (Comment comment in comments)
-            {
-                _commentRepository.CreateComment(comment);
-            }
+            
         }
     }
 }

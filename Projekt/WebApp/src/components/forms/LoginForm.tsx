@@ -4,10 +4,6 @@ import { setUser } from '../../User';
 import { Login } from '../../Client';
 import { getPhrase } from '../LanguageSelector';
 
-//import { GoogleLogin } from '@react-oauth/google';
-
-
-
 interface LoginFormProps {
     selfClose: () => void
     setAuthorised: (arg: boolean) => void

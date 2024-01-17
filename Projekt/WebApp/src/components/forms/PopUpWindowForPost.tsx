@@ -59,7 +59,7 @@ function PopUpWindowForPost(props: PopUpWindowForPostProps) {
             content = <h1>{getPhrase("error-massage")}</h1>
     }
     
-    return props.state != "hidden" && (
+    return props.state != "hidden" ? (
         <div className='popup'>
             <div className='popup-inner'>
                 <div className='close-button-container' onClick={() => props.setState("hidden")}>
@@ -68,7 +68,7 @@ function PopUpWindowForPost(props: PopUpWindowForPostProps) {
                 <p> {content} </p>
             </div>
         </div> 
-    )
+    ) : <div></div>
 }
 
 

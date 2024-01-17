@@ -1,5 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 EXPOSE 7061
+EXPOSE 5099
 WORKDIR /app/
 COPY /API/ /app/
 RUN dotnet tool install --global dotnet-ef

@@ -15,26 +15,21 @@ function ProfilePage() {
     const [editing, setEditing] = useState(false);
     const [bio, setBio] = useState('');
 
-    const [locj, setLocj] = useState({} as any);
+    const [locj, setLocj] = useState(JSON.parse(getUser() ? getUser() as string : "{'userName': 'err', 'bio': 'err', 'id': 0}"));
 
-    var loc = getUser();
+    console.log(locj);
     
     useEffect(() => {
-        setLocj(JSON.parse(loc ? loc : "{'userName': 'err', 'bio': 'err'}"));
-        setBio(locj.bio);
-    }, []);
 
-    useEffect(() => {
-        GetPostsForUser(locj.id, 1)
+        GetPostsForUser(locj.id, page)
         .then((res) => {
             setPosts(res);
+            console.log(res);
         }).catch((err) => {
             console.error(err);
             setPosts([]);
         });
-    }, []);
 
-    useEffect(() => {
         GetMaxPostsForUser(locj.id)
         .then((res) => { 
             setMaxPages(res);
@@ -42,7 +37,7 @@ function ProfilePage() {
             console.error(err);
             setMaxPages(1);
         });
-    }, []);
+    }, [page, locj]);
 
     const buttonHanlde = () => {
         if (editing){
@@ -67,7 +62,7 @@ function ProfilePage() {
                     value={bio} 
                     onChange={(e) => setBio(e.target.value)}></input>
                 <button className='btn btn-primary' onClick={buttonHanlde}>
-                    {editing ? getPhrase('edit-bio') : getPhrase('save-bio')}
+                    {editing ? getPhrase('save-bio') : getPhrase('edit-bio')}
                 </button>
             </div> );
 
@@ -76,7 +71,7 @@ function ProfilePage() {
             <UserProfile user={locj} />
             {bioedit}
             <Paginator maxPages={maxPages} currentPage={page} setCurrentPage={setPage}/>
-            
+            <PostList posts={posts} navigateToUser={() => 1} />            
         </div>
     </>);
 }

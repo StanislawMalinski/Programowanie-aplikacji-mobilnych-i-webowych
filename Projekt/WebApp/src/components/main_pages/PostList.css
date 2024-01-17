@@ -1,11 +1,10 @@
 .post-list-container {
-
-
+    
 }
 
 .post-list {
     overflow-y: scroll;
-    height: 700px;
+    height: 70vh;
 }
 
 .post-container {

@@ -1,20 +1,18 @@
 
 .main-content-frame {
-    padding: 20px;
-    width: 100%;
-    height: 100%;
+
 }
 
 .main-content {
-    padding: 20px;
+    padding: 5px;
     width: 100%;
-    height: 100%;
+    
 }
 
 .pagintor {
     
     justify-content: center;
     align-items: center;
-    padding: 100px;
+    padding: 50px;
     margin: 20px;
 }

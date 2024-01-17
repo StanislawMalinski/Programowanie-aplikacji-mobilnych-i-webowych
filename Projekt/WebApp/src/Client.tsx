@@ -1,6 +1,6 @@
 import './appsettings.json';
 
-const baseUrl = 'https://localhost:7061/forum/';
+const baseUrl = 'https://back-2pbudg4sxa-uc.a.run.app/forum/';
 
 async function curl(url: string, method: string, data: any) {
     try {

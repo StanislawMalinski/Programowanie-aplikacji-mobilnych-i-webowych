@@ -5,10 +5,12 @@ using Microsoft.EntityFrameworkCore;
 public class PostRepository : IPostRepository
 {
     private readonly AppDbContext _dbContext;
+    private readonly Random random;
 
     public PostRepository(AppDbContext dbContext)
     {
         _dbContext = dbContext;
+        random = new Random();
     }
 
     public Post GetPost(int postId)
@@ -61,16 +63,28 @@ public class PostRepository : IPostRepository
 
     public Post CreatePost(Post post)
     {
-        post.Id = getNextId();
-        PostDto dto = mapPostToDto(post);
-        _dbContext.Posts.Add(dto);
-        _dbContext.SaveChanges();
+        bool success = false;
+        while (!success)
+        {
+            try
+            {
+                post.Id = getNextId();
+                PostDto dto = mapPostToDto(post);
+                _dbContext.Posts.Add(dto);
+                _dbContext.SaveChanges();
+                success = true;
+            }
+            catch (DbUpdateException)
+            {
+                success = false;
+            }
+        }
         return post;
     }
 
     private int getNextId()
     {
-        return _dbContext.Posts.Max(u => u.Id) + 1;
+        return random.Next(100, 9999999);
     }
 
     public Post UpdatePost(Post post)

@@ -6,13 +6,12 @@
     height: 60px;
     background-color: #acd0e7;
     border-bottom: 4px solid #e6e6e6;
-    padding: 20px;
 }
 
 .upper-menu-btn {
     background-color: #00ffff;
     width: max-content;
-    margin-right: 20px;
+    margin-left: 20px;
 
     border: none;
     border-radius: 5px;

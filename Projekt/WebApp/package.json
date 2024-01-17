@@ -12,16 +12,25 @@
   "dependencies": {
     "@react-oauth/google": "^0.12.1",
     "bootstrap": "^5.2.3",
+    "css-vars-hook": "^0.7.0",
+    "gapi-script": "^1.2.0",
+    "mic-check": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.0",
     "react-router-dom": "^6.21.2",
+    "react-webcam": "^7.2.0",
     "reactjs-popup": "^2.0.6"
   },
   "devDependencies": {
+    "@speechly/speech-recognition-polyfill": "^1.3.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "@types/react-speech-recognition": "^3.9.5",
     "@vitejs/plugin-react": "^3.1.0",
+    "core-js": "^3.35.0",
+    "react-speech-recognition": "^3.10.0",
+    "regenerator-runtime": "^0.14.1",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
   }

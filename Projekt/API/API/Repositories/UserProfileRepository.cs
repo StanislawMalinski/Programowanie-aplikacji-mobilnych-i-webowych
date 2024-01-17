@@ -4,10 +4,12 @@ using API.Models.Mapper;
 public class UserProfileRepository : IUserProfileRepository
 {
     private readonly AppDbContext _dbContext;
+    private readonly Random random;
 
     public UserProfileRepository(AppDbContext dbContext)
     {
         _dbContext = dbContext;
+        random = new Random();
     }
 
     public UserProfile GetUserProfile(int userId)
@@ -21,15 +23,23 @@ public class UserProfileRepository : IUserProfileRepository
 
     public UserProfile CreateUserProfile(UserProfile userProfile)
     {
-        userProfile.Id = getNextId();
-        UserProfileDto dto = mapUserToDto(userProfile);
-        _dbContext.Users.Add(dto);
-        _dbContext.SaveChanges();
+        bool success = false;
+        while(!success){
+            try{
+                userProfile.Id = getNextId();
+                UserProfileDto dto = mapUserToDto(userProfile);
+                _dbContext.Users.Add(dto);
+                _dbContext.SaveChanges();
+                success = true;
+            }catch(Exception e){
+                Console.WriteLine(e);
+            }
+        }
         return userProfile;
     }
 
     private int getNextId(){
-        return _dbContext.Users.Max(u => u.Id) + 1;
+        return random.Next(100, 9999999);
     }
 
     public UserProfile UpdateUserProfile(UserProfile userProfile)

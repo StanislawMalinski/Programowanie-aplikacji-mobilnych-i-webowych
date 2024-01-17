@@ -57,6 +57,10 @@ const dic = {
   "content" : {"en": "Content", "pl": "Treść"},
   "User already exists." : {"en": "User already exists.", "pl": "Użytkownik już istnieje."},
   "logout-message": {"en": "Are you sure you want to logout?", "pl": "Czy na pewno chcesz się wylogować?"},
+  "edit-bio": {"en": "Edit bio", "pl": "Edytuj bio"},
+  "save-bio": {"en": "Save bio", "pl": "Zapisz bio"},
+  "turn-on": {"en": "Turn on", "pl": "Włącz"},
+  "turn-off": {"en": "Turn off", "pl": "Wyłącz"},
 }
 function LanguageSelector() {
   function setLanguage(lang: string) {
@@ -181,6 +185,14 @@ function getPhrase(phrase: string) {
     res = dic["User already exists."];
   else if (phrase === "logout-message")
     res = dic["logout-message"];
+  else if (phrase === "edit-bio")
+    res = dic["edit-bio"];
+  else if (phrase === "save-bio")
+    res = dic["save-bio"];
+  else if (phrase === "turn-on")
+    res = dic["turn-on"];
+  else if (phrase === "turn-off")
+   res = dic["turn-off"]; 
 
   if (lang === 'en')
     return res.en;
@@ -190,5 +202,10 @@ function getPhrase(phrase: string) {
     return res.en;
 }
 
+const getLang = () => {
+  var lang = localStorage.getItem('lang');
+  return lang === null ? 'en' : lang;
+}
+
 export default LanguageSelector;
-export {getPhrase};
+export {getPhrase, getLang};

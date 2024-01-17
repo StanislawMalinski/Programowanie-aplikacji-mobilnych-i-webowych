@@ -5,6 +5,8 @@ import { getPhrase } from "./LanguageSelector";
 import MainPage from "./main_pages/MainPage";
 import ProfilePage from "./main_pages/ProfilePage";
 import NewPostPage from "./main_pages/NewPostPage";
+import Webcam from 'react-webcam';
+import WebcamCapture from './WebCamView';
 
 interface MainContentProps {
     navigateToProfile(): void;
@@ -13,6 +15,8 @@ interface MainContentProps {
     setSelectedUser: (id: number) => void;
     selectedUser: number;
 }
+
+
 
 function MainContent(props: MainContentProps) {
     var content
